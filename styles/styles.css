@@ -1,0 +1,17 @@
+.full-page {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #aaccab;
+    background-image: url('/static/background.jpg');
+    background-size: cover;
+}
+.page {
+    max-width: 50%;
+    min-height: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
