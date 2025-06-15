@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Explore Nature</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+
+  <style>
+    /* Specific styles for the animal cards section */
+    .animal-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px 0;
+    }
+
+    /* Style for the clickable card container */
+    .animal-card-link {
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+    }
+
+    .animal-card {
+      flex: 0 0 calc(33.333% - 20px);
+      box-sizing: border-box;
+      text-align: center;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    }
+
+    /* Hover effect for the cards */
+    .animal-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        cursor: pointer;
+    }
+
+    .animal-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+    /* Media queries for responsiveness */
+    @media (max-width: 900px) {
+      .animal-card {
+        flex: 0 0 calc(50% - 20px); /* 2 cards per row on medium screens */
+      }
+    }
+
+    @media (max-width: 600px) {
+      .animal-card {
+        flex: 0 0 calc(100% - 20px); /* 1 card per row on very small screens */
+      }
+    }
+  </style>
+
+</head>
+<body class="full-page">
+  <div class="blurred-background"></div>
+
+  <header class="hero-banner">
+    <div class="banner-content">
+      <h1>Explore Nature</h1>
+      <div class="hero-buttons">
+        <button onclick="location.href='index.html'">Home</button>
+        <button onclick="location.href='threats.html'">Pests & Threats</button>
+        <button onclick="location.href='report.html'">Report an Issue</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page">
+    <section>
+      <h2>Parks, Forests & Wildlife</h2>
+      <p>Discover New Zealand's national parks, native forests, and unique wildlife. Learn where to go and what you might see.</p>
+    </section>
+
+    <section class="animal-section">
+        <h2>Native Animals</h2>
+        <div class="animal-cards">
+            <div class="animal-card">
+                <a href="animals/kea.html" class="animal-card-link">
+                    <h3>Kea</h3>
+                    <img src="images/kea.png" alt="Kea">
+                    <p>A smart alpine parrot known for its curiosity and playfulness.</p>
+                </a>
+            </div>
+            <div class="animal-card">
+                <a href="animals/whio.html" class="animal-card-link">
+                    <h3>Blue Duck / Whio</h3>
+                    <img src="images/blue.jpg" alt="Blue Duck">
+                    <p>A rare river duck found only in fast-flowing streams in New Zealand</p>
+                </a>
+            </div>
+            <div class="animal-card">
+                <a href="animals/kokako.html" class="animal-card-link"> <!-- Fixed typo: class="class="animal-card-link"" -->
+                    <h3>Kokako</h3>
+                    <img src="images/kokako.jpg" alt="Kokako">
+                    <p>Famous for it's haunting song, the kokako is a shy forest bird with blue wattles.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -8,6 +8,86 @@
   <script src="js/randomFacts.js" defer></script>
   <script src="js/headerScroll.js" defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <style>
+    /* CSS for centering the hero banner content */
+    .hero-banner .banner-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+    }
+
+    /* Adjustments for the main-content-grid */
+    /* Since the right column (map) is removed, we'll make the grid a single column by default */
+    .main-content-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+      padding: 20px;
+      align-items: start;
+    }
+
+    /* The left-column is now effectively the only column for content within the grid */
+    .left-column {
+        /* No specific width needed, it will take the full grid column */
+    }
+
+    /* Specific styles for the "Learn More" animal cards */
+    .learn-more .animal-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      padding-top: 15px;
+    }
+
+    .learn-more .animal-card {
+      flex: 0 0 calc(50% - 15px);
+      box-sizing: border-box;
+      text-align: center;
+      padding: 10px;
+      border: 1px solid #eee;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    }
+
+    .learn-more .animal-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      cursor: pointer;
+    }
+
+    .learn-more .animal-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 3px;
+      margin-bottom: 5px;
+    }
+
+    .learn-more .animal-card p {
+        font-size: 0.9em;
+        line-height: 1.2em;
+    }
+
+    /* Style the anchor tag to make the entire card clickable */
+    .learn-more .animal-card a {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+    }
+
+    @media (max-width: 768px) {
+        .learn-more .animal-card {
+            flex: 0 0 calc(100% - 15px); /* 1 card per row on smaller screens */
+        }
+    }
+  </style>
+
 </head>
 <body class="full-page">
 
@@ -17,9 +97,9 @@
     <div class="banner-content">
       <h1>Protecting Aotearoa’s Wild Heart</h1>
       <div class="hero-buttons">
-        <button>Explore Nature</button>
-        <button>Pests & Threats</button>
-        <button>Report an Issue</button>
+      <button onclick="location.href='explore.html'">Explore Nature</button>
+      <button onclick="location.href='threats.html'">Pests & Threats</button>
+      <button onclick="location.href='report.html'">Report an Issue</button>
       </div>
     </div>
   </header>
@@ -39,6 +119,12 @@
         <section class="learn-more">
           <h3>Learn More</h3>
           <div class="animal-cards">
+            <a href="pages/kea.html">
+              <div class="animal-card">
+                <img src="images/kea.png" alt="Kea" />
+                <p><strong>Kea</strong><br><em>Nestor notabilis</em></p>
+              </div>
+            </a>
             <div class="animal-card">
               <img src="images/animal1.jpg" alt="Long-tailed Bat" />
               <p><strong>Long-tailed Bat</strong><br><em>Chalinolobus tuberculatus</em></p>
@@ -51,20 +137,18 @@
               <img src="images/animal3.jpg" alt="Tuatara" />
               <p><strong>Tuatara</strong><br><em>Sphenodon punctatus</em></p>
             </div>
-            <div class="animal-card">
-              <img src="images/animal4.jpg" alt="Tui" />
-              <p><strong>Tui</strong><br><em>Prosthemadera novaeseelandiae</em></p>
             </div>
-          </div>
         </section>
       </div>
-      <div class="right-column">
-        <div class="nz-map">
-          <img src="images/nz_map.png" alt="Map of New Zealand" />
-        </div>
-      </div>
-    </div> <section class="did-you-know">
-        <p><strong>Did you know?</strong><br>The best guess of the numbers of land-based native plant and animal's is around 70,000 species. Insects and fungi dominate, each having an estimated 20,000 species - many are yet to be named. Regarding larger animal groups, new species are being discovered faster than scientists can cope with them.</p>
+    </div>
+
+    <section class="factoids">
+      <h3>Three Facts</h3>
+      <ul>
+        <li id="fact1"></li>
+        <li id="fact2"></li>
+        <li id="fact3"></li>
+      </ul>
     </section>
 
     <section class="protected-areas">
@@ -81,15 +165,6 @@
           <img src="images/hiking_walking.jpg" alt="Hiking & Walking" /> <p>Hiking & Walking</p>
         </div>
       </div>
-    </section>
-
-    <section class="factoids">
-      <h3>Three Facts</h3>
-      <ul>
-        <li id="fact1"></li>
-        <li id="fact2"></li>
-        <li id="fact3"></li>
-      </ul>
     </section>
 
     <section class="threats">

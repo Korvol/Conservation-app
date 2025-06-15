@@ -34,8 +34,8 @@ body {
 
 /* Hero Banner - Initial (Big) State */
 .hero-banner {
-    background-image: url('../static/Untitled.png');
-    background-size: cover;
+    background-image: url('../static/Untitled.jpg');
+    background-size:cover;
     background-position: center;
     max-height: 30vh; /* Changed from height to max-height */
     overflow: hidden; /* Added to make max-height animation clean */
@@ -155,7 +155,7 @@ body {
 }
 
 .left-column {
-    /* Styles for the left column content */
+    
 }
 
 .right-column {
@@ -171,7 +171,7 @@ body {
     display: block;
 }
 
-/* General section styling */
+/*section styling */
 section {
     margin-bottom: 30px;
 }
@@ -210,7 +210,7 @@ section h2, section h3 {
     background-color: #4f6631;
 }
 
-/* Icons (using Font Awesome classes) */
+/* Icons*/
 .explore-buttons button .fas {
     font-size: 1.2em;
 }
@@ -260,7 +260,7 @@ section h2, section h3 {
     color: #777;
 }
 
-/* Did you know? Section (Static text from image) */
+/* Did you know? Section*/
 .did-you-know {
     background-color: #e3f2e1;
     border-left: 5px solid #607d3b;
@@ -322,7 +322,7 @@ section h2, section h3 {
 }
 
 
-/* Fact Section (uses randomFacts.js) */
+/* Fact Section*/
 .factoids {
     background-color: #f9f9f9;
     border: 1px solid #ccc;
@@ -386,7 +386,7 @@ section h2, section h3 {
 }
 
 
-/* Threats, Contact, Booking (grouped styling) */
+/* Threats, Contact, Booking*/
 .threats, .contact, .booking {
     margin-top: 40px;
     padding: 20px;
@@ -440,7 +440,7 @@ section h2, section h3 {
         max-width: 50%;
     }
 
-    /* Adjust banner content for smaller screens AND when scrolled */
+
     .hero-banner.hero-banner-scrolled .banner-content {
         flex-direction: row;
         justify-content: space-between;
@@ -499,7 +499,7 @@ section h2, section h3 {
         max-width: 90%;
     }
 
-    /* Further refine small screen scrolled banner */
+    
     .hero-banner.hero-banner-scrolled {
         height: auto;
         min-height: 80px;
