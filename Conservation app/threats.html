@@ -1,30 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pests & Threats</title>
-  <link rel="stylesheet" href="styles/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pests & Threats - Protecting Aotearoa's Wild Heart</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script src="js/headerScroll.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* CSS specific to threats.html and common layout */
+        .hero-banner .banner-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+        }
+
+        .main-content-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            box-sizing: border-box;
+        }
+
+        .left-column {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            line-height: 1.7; /* Improved readability */
+        }
+
+        .threats-section h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            text-align: center;
+        }
+
+        .threats-section h3 {
+            color: #3498db;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-size: 1.8em;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        .threats-section p {
+            color: #555;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .main-content-grid {
+                padding: 15px;
+                margin: 15px auto;
+            }
+            .threats-section h2 {
+                font-size: 2em;
+            }
+            .threats-section h3 {
+                font-size: 1.5em;
+            }
+            .threats-section p {
+                font-size: 1em;
+            }
+        }
+    </style>
 </head>
 <body class="full-page">
-  <div class="blurred-background"></div>
 
-  <header class="hero-banner">
-    <div class="banner-content">
-      <h1>Pests & Threats</h1>
-      <div class="hero-buttons">
-        <button onclick="location.href='index.html'">Home</button>
-        <button onclick="location.href='explore.html'">Explore Nature</button>
-        <button onclick="location.href='report.html'">Report an Issue</button>
-      </div>
-    </div>
-  </header>
+    <div class="blurred-background"></div>
 
-  <main class="page">
-    <section>
-      <h2>Threats to Our Environment</h2>
-      <p>Learn about invasive species, human impact, and other environmental risks facing New Zealand's biodiversity.</p>
-    </section>
-  </main>
+    <header class="hero-banner">
+        <div class="banner-content">
+            <h1>Threats to Aotearoa's Wild Heart</h1>
+            <div class="hero-buttons">
+                <button onclick="location.href='index.html'">Home</button>
+                <button onclick="location.href='explore.html'">Explore Nature</button>
+                <button onclick="location.href='report.html'">Report an Issue</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="page">
+        <div class="main-content-grid">
+            <div class="left-column">
+                <section class="threats-section">
+                    <h2>Protecting Aotearoa: Understanding the Threats</h2>
+                    <p>New Zealand's unique and pristine natural environment, with its lush, green forests and endemic species, faces significant challenges. Various aspects of our urban environment and the broader issue of climate change are causing our precious ecosystems and native wildlife to become increasingly threatened, with many on the verge of extinction. Understanding these threats is the first step towards effective conservation.</p>
+
+                    <h3>Carbon Emissions</h3>
+                    <p>Aotearoa is richly endowed with native forest areas, which are naturally efficient carbon sponges, absorbing CO2 and benefiting from its intake, which supports the growth of larger trees and expansive green areas. Traditionally, carbon emissions might not have posed a severe problem for such an ecologically rich nation.</p>
+                    <p>However, the rapid deforestation driven by urbanization – for the development of new towns, industrial factories, and high-scale farms – has dramatically altered this balance. The carbon stored within these felled trees is released back into the atmosphere, contributing significantly to the high carbon emissions we observe today. To mitigate these adverse effects, it is crucial that we step in to protect our remaining native forests. While New Zealand still boasts substantial forest cover, we must prevent urban sprawl from consuming more of this vital landmass, which is essential for our environmental health.</p>
+
+                    <h3>Climate Change</h3>
+                    <p>Climate Change has been a central topic for experts across various fields, including economists, scientists, geologists, and biologists, for many years. It encompasses several different causes directly linked to the urbanized impacts we have created over time. These impacts have led to a higher average global temperature, discernible sea-level rises, and unprecedented strange weather patterns, unlike anything recorded in recent history.</p>
+                    <p>Aotearoa’s unique wildlife, flora, and fauna are directly impacted by climate change, specifically from these phenomena. We are witnessing changes such as altered plant growing patterns, disrupted animal migration paths, severe habitat loss, increased erosion, a heightened chance of disease spread, and a general increase in species vulnerability. While the magnitude of the problem is vast, recent years have seen organizations step up to lead efforts in mitigating some of the damage that has been done, and to prevent further harm if urbanization continues unchecked, encroaching upon our native forests, coastlines, mountains, and other natural landscapes across the country.</p>
+
+                    <h3>Coastal Erosion</h3>
+                    <p>Coastal erosion has been a natural geological process for as long as humans have observed the earth, involving the gradual wearing away of coastlines by the relentless action of waves, tides, and currents. However, with the current rapid escalation of climate change, we are witnessing an accelerating rise in sea levels, which has directly exacerbated coastal erosion globally and within Aotearoa.</p>
+                    <p>A prime example can be seen on the Kapiti Coast, where seawalls have been installed in an effort to de-escalate the significant amount of coastline being lost to the ocean over the past 2-5 years. Yet, even these substantial efforts are proving insufficient to fully protect homes, vital sand dunes, and the habitats of countless species, which face potential loss due to what could easily become widespread coastal inundation in the near future. While completely reversing the increased volume of seawater in the oceans is currently not feasible, implementing temporary mitigation efforts like robust seawalls or strategic placements of rock piles are crucial stop-gap measures until more permanent, long-term solutions can be developed and implemented.</p>
+                </section>
+            </div>
+        </div>
+    </main>
+
 </body>
 </html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parks & Trails - Protecting Aotearoa's Wild Heart</title>
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <script src="../js/headerScroll.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Page-specific styles for generic pages (consistent with whio.html banner and overall layout) */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow-x: hidden;
+        }
+
+        /* Banner Specific Styles (from whio.html) */
+        .hero-banner {
+            position: relative;
+            top: 0;
+            height: 350px;
+            max-height: 400px;
+            overflow: hidden;
+            padding: 50px 20px;
+            background-position: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: flex-end; /* Keeps content at the bottom of the banner */
+            justify-content: center;
+            flex-direction: column;
+            z-index: 10;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        .hero-banner::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .hero-banner .banner-content {
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-banner h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            margin-right: 0; /* Ensures full width for text alignment */
+            white-space: normal;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-banner .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* Styling for buttons within the hero banner (from whio.html) */
+        .hero-banner .hero-buttons button {
+            padding: 10px 20px;
+            font-size: 1em;
+            margin: 0;
+            /* Other button styles like background-color, color, border, etc., will be inherited from styles.css */
+        }
+
+        /* Main page content area (from whio.html) */
+        .page {
+            margin-top: 0;
+            background-color: rgba(255, 255, 255, 1);
+            position: relative;
+            z-index: 5;
+            min-height: calc(100vh - 350px); /* Ensure content section at least fills remaining viewport height after banner */
+            padding-bottom: 50px;
+        }
+
+        /* Blurred background (from whio.html) */
+        .blurred-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            z-index: 0;
+        }
+
+        /* Styles for this specific page's content grid and sections */
+        .main-content-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            padding: 20px;
+            max-width: 1200px; /* Wider max-width for this grid */
+            margin: 40px auto; /* Consistent top margin with whio-content */
+            box-sizing: border-box;
+        }
+        .left-column {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            line-height: 1.7;
+        }
+        .content-section h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 2.5em; /* Consistent with whio-content h1 */
+            text-align: center;
+        }
+        .content-section h3 {
+            color: #3498db;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-size: 1.8em;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+        .content-section p, .content-section ul {
+            color: #555;
+            font-size: 1.1em; /* Consistent with whio-content p */
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        .location-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .location-card {
+            flex: 0 0 calc(33.333% - 20px); /* Three cards per row for more examples */
+            box-sizing: border-box;
+            text-align: center;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            text-decoration: none; /* Remove underline from link */
+            color: inherit; /* Inherit text color */
+        }
+        .location-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        .location-card img {
+            max-width: 100%;
+            height: 180px; /* Fixed height for consistency */
+            object-fit: cover; /* Cover ensures image fills the space */
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .location-card h4 {
+            margin: 10px 0 5px;
+            color: #2c3e50;
+            font-size: 1.3em;
+        }
+        .location-card p {
+            font-size: 0.9em;
+            text-align: center;
+            margin-bottom: 0;
+            line-height: 1.3;
+        }
+        .back-button-container {
+            text-align: center;
+            margin-top: 50px; /* Consistent with other pages */
+            margin-bottom: 20px;
+        }
+        /* Specific button style for consistency with other pages */
+        .back-button-container button {
+            padding: 10px 20px;
+            font-size: 1em;
+        }
+
+        /* Responsive adjustments for banner and content (from whio.html, merged with current page's needs) */
+        @media (max-width: 992px) {
+            .page {
+                width: 95%;
+            }
+            /* Banner adjustments for medium screens */
+            .hero-banner {
+                height: 250px;
+                padding: 30px 20px;
+            }
+            .hero-banner h1 {
+                font-size: 2.5em;
+            }
+            .hero-buttons button {
+                padding: 8px 15px;
+                font-size: 0.9em;
+            }
+            .page {
+                min-height: calc(100vh - 250px);
+            }
+            .location-card {
+                flex: 0 0 calc(50% - 20px); /* Two cards per row on medium screens */
+            }
+        }
+
+        @media (max-width: 768px) {
+            /* Banner adjustments for small screens */
+            .hero-banner {
+                height: auto;
+                min-height: 200px;
+                padding: 20px;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .hero-banner .banner-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .hero-banner h1 {
+                margin-right: 0;
+                margin-bottom: 10px;
+                font-size: 2em;
+                white-space: normal;
+            }
+
+            .hero-banner .hero-buttons {
+                gap: 10px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .hero-banner .hero-buttons button {
+                padding: 6px 12px;
+                font-size: 0.8em;
+            }
+            .page {
+                min-height: calc(100vh - 200px);
+            }
+
+            /* Content adjustments for smaller screens */
+            .main-content-grid {
+                margin: 20px auto;
+                padding: 0 15px;
+            }
+            .content-section h2 {
+                font-size: 2em;
+            }
+            .content-section h3 {
+                font-size: 1.6em;
+            }
+            .location-card {
+                flex: 0 0 calc(100% - 20px); /* One card per row on small screens */
+            }
+        }
+    </style>
+</head>
+<body class="full-page">
+    <div class="blurred-background"></div>
+    <header class="hero-banner">
+        <div class="banner-content">
+            <h1>New Zealand's Parks & Trails</h1>
+            <div class="hero-buttons">
+                <button onclick="location.href='../index.html'">Home</button>
+                <button onclick="location.href='../explore.html'">Explore Nature</button>
+                <button onclick="location.href='../threats.html'">Pests & Threats</button>
+                <button onclick="location.href='../report.html'">Report an Issue</button>
+            </div>
+        </div>
+    </header>
+    <main class="page">
+        <div class="main-content-grid">
+            <div class="left-column">
+                <section class="content-section">
+                    <h2>Discover Aotearoa's National Parks and Scenic Trails</h2>
+                    <p>New Zealand is world-renowned for its stunning natural landscapes, which are meticulously preserved within a network of national parks and an extensive system of walking and hiking trails (locally known as tramps). These areas offer unparalleled opportunities to experience pristine wilderness, diverse ecosystems, and breathtaking scenery.</p>
+                    <p>From towering mountain ranges and ancient rainforests to dramatic coastlines and crystal-clear lakes, New Zealand's parks and trails cater to all levels of adventurers, from short nature walks to multi-day Great Walks.</p>
+
+                    <h3>Featured Parks & Trails</h3>
+                    <p>Explore some of the most iconic and significant national parks and walking trails in Aotearoa:</p>
+
+                    <div class="location-cards">
+                        <a href="fiordland_national_park.html" class="location-card">
+                            <img src="../images/fiordland.jpg" alt="Fiordland National Park" />
+                            <h4>Fiordland National Park</h4>
+                            <p>New Zealand's largest national park, home to the majestic Milford Sound and Doubtful Sound.</p>
+                        </a>
+                        <a href="routeburn_track_and_huts.html" class="location-card">
+                            <img src="../images/routeburn.jpg" alt="Routeburn Track" />
+                            <h4>Routeburn Track</h4>
+                            <p>One of the premier Great Walks, traversing spectacular alpine scenery.</p>
+                        </a>
+                        <a href="#" class="location-card">
+                            <img src="../images/tongariro.jpg" alt="Tongariro National Park" />
+                            <h4>Tongariro National Park</h4>
+                            <p>A dual World Heritage Area, with active volcanoes and unique landscapes. (Content coming soon!)</p>
+                        </a>
+                        <a href="#" class="location-card">
+                            <img src="../images/abel_tasman.jpg" alt="Abel Tasman National Park" />
+                            <h4>Abel Tasman National Park</h4>
+                            <p>Famous for golden sand beaches, turquoise waters, and coastal walking. (Content coming soon!)</p>
+                        </a>
+                        <a href="#" class="location-card">
+                            <img src="../images/egmont.jpg" alt="Egmont National Park" />
+                            <h4>Egmont National Park</h4>
+                            <p>Dominated by the symmetrical cone of Mount Taranaki, ideal for day walks. (Content coming soon!)</p>
+                        </a>
+                    </div>
+                </section>
+                <div class="back-button-container">
+                    <button onclick="location.href='../explore.html'" style="padding: 10px 20px; font-size: 1em;">Back to Explore Nature</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

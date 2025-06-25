@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wildlife - Protecting Aotearoa's Wild Heart</title>
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <script src="../js/headerScroll.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Common styles from other detail pages */
+        .hero-banner .banner-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+        }
+        .main-content-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            box-sizing: border-box;
+        }
+        .left-column {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            line-height: 1.7;
+        }
+        .content-section h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            text-align: center;
+        }
+        .content-section h3 {
+            color: #3498db;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-size: 1.8em;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+        .content-section p, .content-section ul {
+            color: #555;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        .wildlife-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding-top: 15px;
+        }
+        .wildlife-card {
+            flex: 0 0 calc(33.333% - 15px); /* Changed to three cards per row for more examples */
+            box-sizing: border-box;
+            text-align: center;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            text-decoration: none;
+            color: inherit;
+        }
+        .wildlife-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        .wildlife-card img {
+            max-width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .wildlife-card h4 {
+            margin: 10px 0 5px;
+            color: #2c3e50;
+            font-size: 1.3em;
+        }
+        .wildlife-card p {
+            font-size: 0.9em;
+            line-height: 1.2em;
+            margin-bottom: 0;
+            text-align: center;
+        }
+        .back-button-container {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        .back-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+        .back-button:hover {
+            background-color: #2980b9;
+        }
+        @media (max-width: 768px) {
+            .main-content-grid {
+                padding: 15px;
+                margin: 15px auto;
+            }
+            .content-section h2 {
+                font-size: 2em;
+            }
+            .content-section h3 {
+                font-size: 1.5em;
+            }
+            .content-section p, .content-section ul {
+                font-size: 1em;
+            }
+            .wildlife-card {
+                flex: 0 0 calc(100% - 15px); /* One card per row on small screens */
+            }
+        }
+    </style>
+</head>
+<body class="full-page">
+    <div class="blurred-background"></div>
+    <header class="hero-banner">
+        <div class="banner-content">
+            <h1>New Zealand's Unique Wildlife</h1>
+            <div class="hero-buttons">
+                <a href="../index.html" class="nav-button">Home</a>
+                <a href="explore.html" class="nav-button">Explore Nature</a>
+                <a href="../threats.html" class="nav-button">Pests & Threats</a>
+                <a href="../report.html" class="nav-button">Report an Issue</a>
+            </div>
+        </div>
+    </header>
+    <main class="page">
+        <div class="main-content-grid">
+            <div class="left-column">
+                <section class="content-section">
+                    <h2>Aotearoa: A Haven for Endemic Species</h2>
+                    <p>New Zealand's geographical isolation for millions of years has resulted in the evolution of incredibly unique wildlife, many species of which are endemic, meaning they are found nowhere else on Earth. Before human arrival, the land was dominated by birds, insects, and reptiles, with no native land mammals except for bats.</p>
+                    <p>This distinct evolutionary path has led to a remarkable diversity of flightless birds, giant insects, and ancient reptiles, making New Zealand a biodiversity hotspot. However, many of these species are now endangered due to introduced predators and habitat loss, making conservation efforts paramount.</p>
+
+                    <h3>Featured Native Species</h3>
+                    <p>Click on the cards below to learn more about some of New Zealand's fascinating native animals:</p>
+
+                    <div class="wildlife-cards">
+                        <a href="../animals/kea.html" class="wildlife-card">
+                            <img src="../images/kea.png" alt="Kea" />
+                            <h4>Kea</h4>
+                            <p>The world's only alpine parrot, known for its intelligence and curious nature.</p>
+                        </a>
+                        <a href="../animals/whio.html" class="wildlife-card">
+                            <img src="../images/blue.jpg" alt="Blue Duck / Whio" />
+                            <h4>Blue Duck / Whio</h4>
+                            <p>New Zealand's unique river duck, thriving in fast-flowing waters.</p>
+                        </a>
+                        <a href="../animals/kokako.html" class="wildlife-card">
+                            <img src="../images/kokako.jpg" alt="Kokako" />
+                            <h4>Kōkako</h4>
+                            <p>An ancient forest bird with a haunting, flute-like song and distinctive blue wattle.</p>
+                        </a>
+                        </a>
+                        <a href="../animals/kiwi.html" class="wildlife-card">
+                            <img src="../images/kiwi.jpg" alt="Kiwi" />
+                            <h4>Kiwi</h4>
+                            <p>New Zealand's iconic, flightless national bird, a symbol of the country.</p>
+                        </a>
+                        <a href="../animals/hectors_dolphin.html" class="wildlife-card">
+                            <img src="../images/dolphin.webp" alt="Hector's Dolphin" />
+                            <h4>Hector's Dolphin</h4>
+                            <p>One of the smallest and rarest marine dolphins in the world, endemic to NZ.</p>
+                        </a>
+                        <a href="../animals/fantail.html" class="wildlife-card">
+                            <img src="../images/fantail.jpg" alt="Fantail" />
+                            <h4>Fantail (Pīwakawaka)</h4>
+                            <p>A common, friendly, and acrobatic native bird with a distinctive fanned tail.</p>
+                        </a>
+                    </div>
+                </section>
+                <div class="back-button-container">
+                    <a href="explore.html" class="back-button">Back to Explore Nature</a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>All About the Kōkako - Protecting Aotearoa's Wild Heart</title>
+    <title>Stoat - Pests in Aotearoa</title>
     <link rel="stylesheet" href="../styles/styles.css" />
+    <script src="../js/headerScroll.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <style>
-        /* Page-specific styles for kokako.html banner and content - kept consistent with other animal pages */
+        /* Page-specific styles for pest pages (consistent with whio.html layout) */
         html, body {
             margin: 0;
             padding: 0;
@@ -16,7 +17,7 @@
             overflow-x: hidden;
         }
 
-        /* Banner Specific Styles for kokako.html */
+        /* Banner Specific Styles */
         .hero-banner {
             position: relative;
             top: 0;
@@ -72,10 +73,12 @@
             justify-content: center;
         }
 
+        /* Styling for buttons within the hero banner */
         .hero-banner .hero-buttons button {
             padding: 10px 20px;
             font-size: 1em;
             margin: 0;
+            /* Other button styles like background-color, color, border, etc., will be inherited from styles.css */
         }
 
         /* Main page content area */
@@ -100,8 +103,8 @@
             z-index: 0;
         }
 
-        /* Page-specific styles for kokako.html content */
-        .kokako-content { /* Renamed from kea-content/whio-content for clarity */
+        /* Page-specific styles for content area (using whio-content naming convention) */
+        .whio-content {
             max-width: 900px;
             margin: 40px auto;
             padding: 0 20px;
@@ -109,40 +112,40 @@
             color: #333;
         }
 
-        .kokako-content h1, .kokako-content h2, .kokako-content h3 {
+        .whio-content h1, .whio-content h2, .whio-content h3 {
             color: #2c3e50;
             margin-top: 30px;
             margin-bottom: 15px;
             text-align: center;
         }
 
-        .kokako-content h1 {
+        .whio-content h1 {
             font-size: 2.5em;
         }
 
-        .kokako-content h2 {
+        .whio-content h2 {
             font-size: 2em;
             border-bottom: 2px solid #e0e0e0;
             padding-bottom: 5px;
         }
 
-        .kokako-intro {
+        .whio-intro {
             display: flex;
             flex-direction: column;
             align-items: center;
             margin-bottom: 30px;
         }
 
-        .kokako-intro img {
+        .whio-intro img {
             max-width: 100%;
-            width: 500px;
+            width: 500px; /* Consistent image width */
             height: auto;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             margin-bottom: 20px;
         }
 
-        .kokako-facts-grid { /* Renamed from kea-facts-grid/whio-facts-grid */
+        .whio-facts-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
@@ -159,19 +162,19 @@
         }
 
         .fact-card h3 {
-            color: #3498db;
+            color: #e74c3c; /* Reddish for pest facts */
             font-size: 1.2em;
             margin-top: 0;
             margin-bottom: 10px;
         }
 
-        .kokako-content ul {
+        .whio-content ul {
             list-style-type: disc;
             margin-left: 20px;
             padding-left: 0;
         }
 
-        .kokako-content li {
+        .whio-content li {
             margin-bottom: 8px;
         }
 
@@ -235,17 +238,17 @@
             }
 
             /* Content adjustments for smaller screens */
-            .kokako-content {
+            .whio-content {
                 margin: 20px auto;
                 padding: 0 15px;
             }
-            .kokako-content h1 {
+            .whio-content h1 {
                 font-size: 2em;
             }
-            .kokako-content h2 {
+            .whio-content h2 {
                 font-size: 1.6em;
             }
-            .kokako-facts-grid {
+            .whio-facts-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -257,7 +260,7 @@
 
     <header class="hero-banner">
         <div class="banner-content">
-            <h1>Kōkako</h1>
+            <h1>The Threat of the Stoat</h1>
             <div class="hero-buttons">
                 <button onclick="location.href='../index.html'">Home</button>
                 <button onclick="location.href='../explore.html'">Explore Nature</button>
@@ -268,80 +271,79 @@
     </header>
 
     <main class="page">
-        <div class="kokako-content">
-            <h1>All About the Kōkako</h1>
+        <div class="whio-content">
+            <h1>Stoats: A Major Threat to New Zealand's Wildlife</h1>
 
-            <section class="kokako-intro">
-                <img src="../images/kokako.jpg" alt="A Kōkako bird perched on a branch, showcasing its blue wattles.">
-                <p>The Kōkako (scientific name: <em>Callaeas cinerea</em>) is an endemic species to Aotearoa known for their very distinct birdsong. They belong to the same family of wattlebirds as the Tīeke (Saddleback) and the extinct and popularly known Huia.</p>
+            <section class="whio-intro">
+                <img src="../images/stoat.jpg" alt="A stoat in a natural New Zealand environment, looking alert.">
+                <p>Stoats (<em>Mustela erminea</em>) are one of New Zealand's most damaging introduced predators, posing a severe and ongoing threat to native bird populations, eggs, chicks, and other vulnerable wildlife. Introduced in the late 19th century to control rabbits and hares, they quickly spread throughout the country and adapted to New Zealand's diverse ecosystems, becoming a major factor in the decline and extinction of many endemic species.</p>
+                <p>These highly intelligent, agile, and cunning hunters are incredibly adaptable. Their slender bodies allow them to squeeze into incredibly small spaces, giving them access to nests in tree hollows and burrows where vulnerable native birds, lizards, and invertebrates have no defense. They are relentless predators with a high metabolic rate, meaning they need to hunt frequently, causing disproportionate damage to native fauna that evolved without ground predators.</p>
             </section>
 
             <section>
                 <h2>Key Facts & Characteristics</h2>
-                <div class="kokako-facts-grid">
+                <div class="whio-facts-grid">
                     <div class="fact-card">
-                        <h3>Two Species</h3>
-                        <p>There are two species of Kōkako, one for each main island: the North Island Kōkako (<em>Callaeas cinerea wilsoni</em>) and the South Island Kōkako (<em>Callaeas cinerea cinerea</em>).</p>
+                        <h3>Stealthy Hunter</h3>
+                        <p>Stoats are known for their stealth, agility, and cunning, making them highly effective predators in various environments.</p>
                     </div>
                     <div class="fact-card">
-                        <h3>Distinct Birdsong</h3>
-                        <p>Kōkako are renowned for their hauntingly beautiful, organ-like song that echoes through the native forests, a truly unique sound of the New Zealand bush.</p>
+                        <h3>Voracious Appetite</h3>
+                        <p>With a high metabolic rate, stoats are constant hunters, killing more than they can eat and caching the surplus.</p>
                     </div>
                     <div class="fact-card">
-                        <h3>Wattlebird Family</h3>
-                        <p>They are part of New Zealand's endemic wattlebird family, distinguished by fleshy wattles on either side of their beak.</p>
+                        <h3>Wide Diet</h3>
+                        <p>They prey on a vast range of species, from large birds like kiwi and whio, to eggs, chicks, lizards, insects, and even mice and rats.</p>
                     </div>
                     <div class="fact-card">
-                        <h3>Habitat Preference</h3>
-                        <p>North Island Kōkako are commonly found in native forest in the central North Island, while the South Island Kōkako would typically inhabit beech forests on both sides of the Southern Alps.</p>
+                        <h3>Rapid Reproduction</h3>
+                        <p>Stoats have a unique reproductive strategy where females can mate as tiny kits, leading to rapid population growth.</p>
                     </div>
                     <div class="fact-card">
-                        <h3>Weak Flight</h3>
-                        <p>Kōkako are not strong fliers; they prefer to move through the canopy by hopping and gliding, using their powerful legs.</p>
+                        <h3>Highly Adaptable</h3>
+                        <p>They can thrive in nearly all New Zealand habitats, from alpine areas to dense forests and coastal regions.</p>
                     </div>
                 </div>
             </section>
 
             <section>
-                <h2>Conservation Status & Population</h2>
-                <p>Official numbers confirm the North Island Kōkako is **Nationally Increasing** and currently has around **2,300 pairs** in the wild. This positive trend is a result of dedicated conservation efforts.</p>
-                <p>However, there is no census data available for the South Island Kōkako, suggesting it might be extinct or exists in a very low population, as there has been no official sighting since 2007. Its status remains precarious.</p>
+                <h2>Impact on Native Wildlife</h2>
+                <p>Stoats have had a devastating impact on New Zealand's unique and vulnerable native fauna, which evolved in the absence of mammalian predators:</p>
+                <ul>
+                    <li><strong>Bird Predation:</strong> They are a primary cause of decline for many ground-nesting and flightless birds, including kiwi, kākāpō, whio (blue duck), and takahe. They also prey on eggs and chicks in tree nests.</li>
+                    <li><strong>Lizard and Insect Decline:</strong> Native reptiles and large invertebrates, many of which are rare and endangered, are also easy prey for stoats.</li>
+                    <li><strong>Ecosystem Disruption:</strong> Their unchecked predation disrupts natural food webs and can lead to cascades of decline across entire ecosystems.</li>
+                </ul>
+                <p>Their impact is particularly severe during nesting seasons when birds are vulnerable and their offspring are defenseless.</p>
             </section>
 
             <section>
-                <h2>Threats to the Kōkako</h2>
-                <p>The primary threats for the Kōkako, especially the recovering North Island population, include:</p>
+                <h2>Where They Are Found</h2>
+                <p>Stoats are widespread across New Zealand's North, South, and Stewart Islands, making them one of the most pervasive threats to native biodiversity. They can be found in almost any habitat, including:</p>
                 <ul>
-                    <li><strong>Predation:</strong> Introduced mammalian predators such as stoats, possums, and rats are the main danger, preying on eggs, chicks, and adult birds.</li>
-                    <li><strong>Natural Competition for Food:</strong> Competition from introduced species or other native birds for limited food resources can also impact their survival and breeding success.</li>
-                    <li><strong>Habitat Loss & Fragmentation:</strong> While not as current a primary threat as predation for North Island Kōkako in protected areas, historical deforestation and fragmented habitats remain long-term challenges.</li>
+                    <li><strong>Native Forests:</strong> From dense podocarp forests to beech forests.</li>
+                    <li><strong>Alpine Areas:</strong> Including tussock lands and high-country regions.</li>
+                    <li><strong>Farmland and Scrubland:</strong> Adapting to agricultural and semi-natural landscapes.</li>
+                    <li><strong>Coastal Areas:</strong> Preying on seabirds and other coastal species.</li>
                 </ul>
+                <p>The only places generally free of stoats are offshore islands and intensively managed predator-free mainland sanctuaries.</p>
             </section>
 
             <section>
-                <h2>Where to See Them</h2>
-                <p>To experience the Kōkako and its incredible song, you'll need to visit areas where intensive conservation efforts have allowed their populations to recover. These include:</p>
+                <h2>Control & Eradication Efforts</h2>
+                <p>Controlling stoat populations is a cornerstone of New Zealand's conservation strategy:</p>
                 <ul>
-                    <li><strong>Mainland Islands:</strong> Protected areas within larger forests where predator control is active, such as Boundary Stream Mainland Island (Hawke's Bay) and Pureora Forest Park (Waikato).</li>
-                    <li><strong>Predator-Free Islands:</strong> Islands like Tiritiri Matangi Island (Hauraki Gulf) and Kapiti Island are safe havens where Kōkako thrive and are more easily spotted.</li>
+                    <li><strong>Trapping Networks:</strong> Extensive networks of traps (e.g., DOC 200 traps) are deployed across conservation lands and increasingly in community-led backyard trapping initiatives.</li>
+                    <li><strong>Baiting Programs:</strong> Poison baits (e.g., 1080) are used in large-scale aerial or ground operations in remote and difficult-to-access areas to suppress stoat populations over wide landscapes.</li>
+                    <li><strong>Predator Free 2050 Initiative:</strong> A national goal to eradicate stoats, rats, and possums from the entire country by 2050, requiring innovative research and widespread community involvement.</li>
+                    <li><strong>Bio-control Research:</strong> Investigating new technologies and methods for long-term, sustainable stoat eradication.</li>
+                    <li><strong>Public Awareness:</strong> Educating the public about the severe impact of stoats and encouraging participation in pest control efforts.</li>
                 </ul>
-                <p>For the best chance of hearing their famous song, visit at dawn or dusk. Remember to remain quiet and observe them from a distance to avoid disturbance.</p>
-            </section>
-
-            <section>
-                <h2>Conservation Efforts</h2>
-                <p>The positive trend for the North Island Kōkako is a direct result of ongoing and effective conservation strategies:</p>
-                <ul>
-                    <li><strong>Intensive Predator Control:</strong> Large-scale trapping and baiting programs are continually implemented in Kōkako habitats to suppress predator numbers.</li>
-                    <li><strong>Habitat Management:</strong> Maintaining and restoring the health of their native forest environments is crucial for providing adequate food and nesting sites.</li>
-                    <li><strong>Translocation Programs:</strong> Moving Kōkako to new, secure, predator-free locations has been vital in establishing new populations and increasing genetic diversity.</li>
-                    <li><strong>Monitoring and Research:</strong> Ongoing scientific research and population monitoring help conservationists understand Kōkako ecology and adapt strategies for best outcomes.</li>
-                </ul>
-                <p>These combined efforts are essential for safeguarding the future of this unique New Zealand forest bird.</p>
+                <p>These efforts are vital to protect and allow the recovery of New Zealand's unique and vulnerable native species.</p>
             </section>
 
             <p style="text-align: center; margin-top: 50px;">
-                <button onclick="location.href='../explore.html'" style="padding: 10px 20px; font-size: 1em;">Back to Explore Nature</button>
+                <button onclick="location.href='../threats.html'" style="padding: 10px 20px; font-size: 1em;">Back to Pests & Threats</button>
             </p>
         </div>
     </main>

@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>All About the Kōkako - Protecting Aotearoa's Wild Heart</title>
+    <title>All About the Kiwi - Protecting Aotearoa's Wild Heart</title>
     <link rel="stylesheet" href="../styles/styles.css" />
+    <script src="../js/headerScroll.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <style>
-        /* Page-specific styles for kokako.html banner and content - kept consistent with other animal pages */
+        /* Page-specific styles for animal pages (inspired by whio.html) */
         html, body {
             margin: 0;
             padding: 0;
@@ -16,7 +17,7 @@
             overflow-x: hidden;
         }
 
-        /* Banner Specific Styles for kokako.html */
+        /* Banner Specific Styles for whio.html */
         .hero-banner {
             position: relative;
             top: 0;
@@ -72,10 +73,12 @@
             justify-content: center;
         }
 
+        /* Styling for buttons within the hero banner */
         .hero-banner .hero-buttons button {
             padding: 10px 20px;
             font-size: 1em;
             margin: 0;
+            /* Other button styles like background-color, color, border, etc., will be inherited from styles.css */
         }
 
         /* Main page content area */
@@ -88,7 +91,7 @@
             padding-bottom: 50px;
         }
 
-        /* Blurred background */
+        /* Blurred background (already in styles.css, but kept for explicit preference) */
         .blurred-background {
             position: fixed;
             top: 0;
@@ -100,8 +103,8 @@
             z-index: 0;
         }
 
-        /* Page-specific styles for kokako.html content */
-        .kokako-content { /* Renamed from kea-content/whio-content for clarity */
+        /* Page-specific styles for content area (using whio-content naming) */
+        .whio-content {
             max-width: 900px;
             margin: 40px auto;
             padding: 0 20px;
@@ -109,40 +112,40 @@
             color: #333;
         }
 
-        .kokako-content h1, .kokako-content h2, .kokako-content h3 {
+        .whio-content h1, .whio-content h2, .whio-content h3 {
             color: #2c3e50;
             margin-top: 30px;
             margin-bottom: 15px;
             text-align: center;
         }
 
-        .kokako-content h1 {
+        .whio-content h1 {
             font-size: 2.5em;
         }
 
-        .kokako-content h2 {
+        .whio-content h2 {
             font-size: 2em;
             border-bottom: 2px solid #e0e0e0;
             padding-bottom: 5px;
         }
 
-        .kokako-intro {
+        .whio-intro {
             display: flex;
             flex-direction: column;
             align-items: center;
             margin-bottom: 30px;
         }
 
-        .kokako-intro img {
+        .whio-intro img {
             max-width: 100%;
-            width: 500px;
+            width: 500px; /* Specific width from whio.html */
             height: auto;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             margin-bottom: 20px;
         }
 
-        .kokako-facts-grid { /* Renamed from kea-facts-grid/whio-facts-grid */
+        .whio-facts-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
@@ -165,13 +168,13 @@
             margin-bottom: 10px;
         }
 
-        .kokako-content ul {
+        .whio-content ul {
             list-style-type: disc;
             margin-left: 20px;
             padding-left: 0;
         }
 
-        .kokako-content li {
+        .whio-content li {
             margin-bottom: 8px;
         }
 
@@ -235,17 +238,17 @@
             }
 
             /* Content adjustments for smaller screens */
-            .kokako-content {
+            .whio-content {
                 margin: 20px auto;
                 padding: 0 15px;
             }
-            .kokako-content h1 {
+            .whio-content h1 {
                 font-size: 2em;
             }
-            .kokako-content h2 {
+            .whio-content h2 {
                 font-size: 1.6em;
             }
-            .kokako-facts-grid {
+            .whio-facts-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -257,7 +260,7 @@
 
     <header class="hero-banner">
         <div class="banner-content">
-            <h1>Kōkako</h1>
+            <h1>Kiwi</h1>
             <div class="hero-buttons">
                 <button onclick="location.href='../index.html'">Home</button>
                 <button onclick="location.href='../explore.html'">Explore Nature</button>
@@ -268,80 +271,85 @@
     </header>
 
     <main class="page">
-        <div class="kokako-content">
-            <h1>All About the Kōkako</h1>
+        <div class="whio-content">
+            <h1>All About the Kiwi</h1>
 
-            <section class="kokako-intro">
-                <img src="../images/kokako.jpg" alt="A Kōkako bird perched on a branch, showcasing its blue wattles.">
-                <p>The Kōkako (scientific name: <em>Callaeas cinerea</em>) is an endemic species to Aotearoa known for their very distinct birdsong. They belong to the same family of wattlebirds as the Tīeke (Saddleback) and the extinct and popularly known Huia.</p>
+            <section class="whio-intro">
+                <img src="../images/kiwi.jpg" alt="A Kiwi bird in a forest environment.">
+                <p>The Kiwi is a highly distinctive and iconic flightless bird, truly unique to Aotearoa (New Zealand). It is the national symbol and an unofficial emblem of the country, deeply embedded in New Zealand's identity. There are five main species of kiwi, all of which are threatened to varying degrees, making their conservation a critical national effort.</p>
             </section>
 
             <section>
                 <h2>Key Facts & Characteristics</h2>
-                <div class="kokako-facts-grid">
+                <div class="whio-facts-grid">
                     <div class="fact-card">
-                        <h3>Two Species</h3>
-                        <p>There are two species of Kōkako, one for each main island: the North Island Kōkako (<em>Callaeas cinerea wilsoni</em>) and the South Island Kōkako (<em>Callaeas cinerea cinerea</em>).</p>
+                        <h3>Nocturnal Foragers</h3>
+                        <p>Kiwi are primarily nocturnal, using their keen sense of smell to forage for invertebrates, such as worms and grubs, as well as seeds and fruit on the forest floor.</p>
                     </div>
                     <div class="fact-card">
-                        <h3>Distinct Birdsong</h3>
-                        <p>Kōkako are renowned for their hauntingly beautiful, organ-like song that echoes through the native forests, a truly unique sound of the New Zealand bush.</p>
+                        <h3>Unique Bill & Nostrils</h3>
+                        <p>Their long, sensitive beaks have nostrils at the very end, a unique adaptation among birds, allowing them to sniff out prey buried deep in the ground.</p>
                     </div>
                     <div class="fact-card">
-                        <h3>Wattlebird Family</h3>
-                        <p>They are part of New Zealand's endemic wattlebird family, distinguished by fleshy wattles on either side of their beak.</p>
+                        <h3>Hair-like Feathers</h3>
+                        <p>Unlike most birds, Kiwi feathers are coarse and resemble hair, providing excellent insulation in their forest habitats.</p>
                     </div>
                     <div class="fact-card">
-                        <h3>Habitat Preference</h3>
-                        <p>North Island Kōkako are commonly found in native forest in the central North Island, while the South Island Kōkako would typically inhabit beech forests on both sides of the Southern Alps.</p>
+                        <h3>Strong Legs, No Flight</h3>
+                        <p>With powerful, muscular legs, Kiwi are surprisingly fast runners and can deliver strong kicks for defense, despite being flightless.</p>
                     </div>
                     <div class="fact-card">
-                        <h3>Weak Flight</h3>
-                        <p>Kōkako are not strong fliers; they prefer to move through the canopy by hopping and gliding, using their powerful legs.</p>
+                        <h3>Large Eggs</h3>
+                        <p>Kiwi lay one of the largest eggs relative to their body size of any bird, with the egg sometimes making up 20% of the female's weight.</p>
                     </div>
                 </div>
             </section>
 
             <section>
                 <h2>Conservation Status & Population</h2>
-                <p>Official numbers confirm the North Island Kōkako is **Nationally Increasing** and currently has around **2,300 pairs** in the wild. This positive trend is a result of dedicated conservation efforts.</p>
-                <p>However, there is no census data available for the South Island Kōkako, suggesting it might be extinct or exists in a very low population, as there has been no official sighting since 2007. Its status remains precarious.</p>
+                <p>All five species of Kiwi are classified as threatened. Their conservation status ranges from **Nationally Vulnerable** to **Critically Endangered**. Population estimates vary by species, but overall, their numbers are declining, primarily due to predation by introduced mammals. Less than 20% of kiwi chicks survive to adulthood in areas without predator control.</p>
+                <p>This dire situation underscores the ongoing and urgent need for intensive conservation efforts to protect these beloved birds.</p>
             </section>
 
             <section>
-                <h2>Threats to the Kōkako</h2>
-                <p>The primary threats for the Kōkako, especially the recovering North Island population, include:</p>
+                <h2>Threats to the Kiwi</h2>
+                <p>Kiwi face significant threats that have led to their endangered status:</p>
                 <ul>
-                    <li><strong>Predation:</strong> Introduced mammalian predators such as stoats, possums, and rats are the main danger, preying on eggs, chicks, and adult birds.</li>
-                    <li><strong>Natural Competition for Food:</strong> Competition from introduced species or other native birds for limited food resources can also impact their survival and breeding success.</li>
-                    <li><strong>Habitat Loss & Fragmentation:</strong> While not as current a primary threat as predation for North Island Kōkako in protected areas, historical deforestation and fragmented habitats remain long-term challenges.</li>
+                    <li><strong>Predation:</strong> Introduced predators are the biggest threat. Stoats are a major killer of kiwi chicks, while adult kiwi are vulnerable to dogs, ferrets, and cats.</li>
+                    <li><strong>Habitat Loss & Fragmentation:</strong> Deforestation and conversion of native bush for agriculture or development reduce their natural habitats and isolate populations.</li>
+                    <li><strong>Road Kills:</strong> Kiwi can be hit by vehicles when crossing roads, especially in areas bordering their habitats.</li>
+                    <li><strong>Disease:</strong> Although less common, diseases can also impact kiwi populations.</li>
                 </ul>
             </section>
 
             <section>
                 <h2>Where to See Them</h2>
-                <p>To experience the Kōkako and its incredible song, you'll need to visit areas where intensive conservation efforts have allowed their populations to recover. These include:</p>
+                <p>While often shy and nocturnal, Kiwi can be found in various native forests and conservation areas across New Zealand. Dedicated conservation sites offer the best chance of spotting them:</p>
                 <ul>
-                    <li><strong>Mainland Islands:</strong> Protected areas within larger forests where predator control is active, such as Boundary Stream Mainland Island (Hawke's Bay) and Pureora Forest Park (Waikato).</li>
-                    <li><strong>Predator-Free Islands:</strong> Islands like Tiritiri Matangi Island (Hauraki Gulf) and Kapiti Island are safe havens where Kōkako thrive and are more easily spotted.</li>
+                    <li><strong>Northland:</strong> Areas with intensive predator control, particularly for Northland Brown Kiwi.</li>
+                    <li><strong>Coromandel Peninsula:</strong> Home to the Coromandel Brown Kiwi, with ongoing conservation projects.</li>
+                    <li><strong>Kapiti Island:</strong> A predator-free sanctuary near Wellington, with healthy populations of Little Spotted Kiwi.</li>
+                    <li><strong>Stewart Island/Rakiura:</strong> Known for its high population of Southern Brown Kiwi, often seen foraging during the day.</li>
+                    <li><strong>Orokonui Ecosanctuary (Dunedin) & Zealandia (Wellington):</strong> Enclosed ecosanctuaries where Kiwi can be observed in a protected environment.</li>
                 </ul>
-                <p>For the best chance of hearing their famous song, visit at dawn or dusk. Remember to remain quiet and observe them from a distance to avoid disturbance.</p>
+                <p>Kiwi are often seen in dedicated nocturnal houses at zoos and wildlife parks, offering a guaranteed viewing experience.</p>
             </section>
 
             <section>
                 <h2>Conservation Efforts</h2>
-                <p>The positive trend for the North Island Kōkako is a direct result of ongoing and effective conservation strategies:</p>
+                <p>Extensive conservation programs are crucial for the survival of the Kiwi, involving government agencies, iwi (Māori tribes), and community groups:</p>
                 <ul>
-                    <li><strong>Intensive Predator Control:</strong> Large-scale trapping and baiting programs are continually implemented in Kōkako habitats to suppress predator numbers.</li>
-                    <li><strong>Habitat Management:</strong> Maintaining and restoring the health of their native forest environments is crucial for providing adequate food and nesting sites.</li>
-                    <li><strong>Translocation Programs:</strong> Moving Kōkako to new, secure, predator-free locations has been vital in establishing new populations and increasing genetic diversity.</li>
-                    <li><strong>Monitoring and Research:</strong> Ongoing scientific research and population monitoring help conservationists understand Kōkako ecology and adapt strategies for best outcomes.</li>
+                    <li><strong>Intensive Predator Control:</strong> Large-scale trapping and poisoning operations target stoats, ferrets, and other predators in key kiwi habitats.</li>
+                    <li><strong>"Operation Nest Egg" (ONE):</strong> Eggs are collected from the wild, incubated, and hatched in captivity. Chicks are then raised in predator-free environments until they are large enough (around 1kg) to defend against stoats before being returned to the wild.</li>
+                    <li><strong>Predator-Free Sanctuaries:</strong> Establishment and maintenance of mainland island sanctuaries and offshore islands free of introduced predators provide safe havens.</li>
+                    <li><strong>Dog Aversion Training:</strong> Training dogs and their owners to avoid kiwi, as even well-behaved dogs can accidentally kill a kiwi.</li>
+                    <li><strong>Community Involvement:</strong> Public awareness campaigns and local community groups actively participate in conservation efforts, including monitoring and advocacy.</li>
                 </ul>
-                <p>These combined efforts are essential for safeguarding the future of this unique New Zealand forest bird.</p>
+                <p>These dedicated efforts are vital to reverse the decline and ensure the future of New Zealand's iconic national bird.</p>
             </section>
 
             <p style="text-align: center; margin-top: 50px;">
-                <button onclick="location.href='../explore.html'" style="padding: 10px 20px; font-size: 1em;">Back to Explore Nature</button>
+                <button onclick="location.href='../pages/wildlife_overview.html'" style="padding: 10px 20px; font-size: 1em;">Back to Wildlife Overview</button>
             </p>
         </div>
     </main>

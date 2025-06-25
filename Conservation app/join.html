@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Report an Issue</title>
+    <title>Join Us - Protecting Aotearoa's Wild Heart</title>
     <link rel="stylesheet" href="styles/styles.css" />
     <script src="js/headerScroll.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
     <style>
         /* Common styles for full-page layout, banner, and main content structure (consistent with whio.html) */
         html, body {
@@ -103,28 +102,52 @@
             z-index: 0;
         }
 
-        /* Styles for content area (using whio-content naming convention for consistency) */
-        .whio-content {
-            max-width: 900px;
-            margin: 40px auto; /* Consistent top margin with other detail pages */
-            padding: 0 20px;
-            line-height: 1.6;
-            color: #333;
+        /* Styles for this specific page's content grid and sections */
+        .main-content-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            padding: 20px;
+            max-width: 1000px; /* Specific max-width for this page */
+            margin: 40px auto; /* Consistent top margin with whio-content */
+            box-sizing: border-box;
         }
-
-        .whio-content h2 {
+        .left-column {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            line-height: 1.7;
+        }
+        .join-section h2 {
             color: #2c3e50;
-            margin-top: 30px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             font-size: 2.5em; /* Consistent with other main section titles */
             text-align: center;
         }
-
-        .whio-content p {
+        .join-section h3 {
+            color: #3498db;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-size: 1.8em;
+            border-bottom: 2px solid #eee; /* Added for consistency */
+            padding-bottom: 5px; /* Added for consistency */
+        }
+        .join-section p {
             color: #555;
             font-size: 1.1em;
             margin-bottom: 15px;
             text-align: justify;
+        }
+        .back-button-container {
+            text-align: center;
+            margin-top: 50px; /* Consistent with other pages */
+            margin-bottom: 20px;
+        }
+        /* Specific button style for consistency with other pages */
+        .back-button-container button {
+            padding: 10px 20px;
+            font-size: 1em;
         }
 
         /* Responsive adjustments for banner and content */
@@ -187,14 +210,17 @@
             }
 
             /* Content adjustments for smaller screens */
-            .whio-content {
+            .main-content-grid {
                 margin: 20px auto;
                 padding: 0 15px;
             }
-            .whio-content h2 {
+            .join-section h2 {
                 font-size: 2em;
             }
-            .whio-content p {
+            .join-section h3 {
+                font-size: 1.5em;
+            }
+            .join-section p {
                 font-size: 1em;
             }
         }
@@ -202,41 +228,39 @@
 </head>
 <body class="full-page">
     <div class="blurred-background"></div>
-
     <header class="hero-banner">
         <div class="banner-content">
-            <h1>Report an Issue</h1>
+            <h1>Join Our Conservation Efforts</h1>
             <div class="hero-buttons">
                 <button onclick="location.href='index.html'">Home</button>
                 <button onclick="location.href='explore.html'">Explore Nature</button>
                 <button onclick="location.href='threats.html'">Pests & Threats</button>
+                <button onclick="location.href='report.html'">Report an Issue</button>
             </div>
         </div>
     </header>
-
     <main class="page">
-        <div class="whio-content">
-            <section>
-                <h2>Seen Something?</h2>
-                <p>If you've spotted a pest or environmental threat, letting the right people know quickly can make a big difference for Aotearoa's unique wildlife and natural spaces. Here's how you can report an issue:</p>
-
-                <h3>For Animal-Related Issues:</h3>
-                <ul>
-                    <li><strong>Injured or Deceased Wildlife:</strong> If you find an injured or deceased native animal (like a bird, marine mammal, or lizard), please contact the Department of Conservation (DOC) emergency hotline: <strong>0800 DOC HOT (0800 362 468)</strong>.</li>
-                    <li><strong>Pest Sightings (Stoats, Rats, Possums, etc.):</strong> For general pest sightings in conservation areas, you can also report these to DOC via their website or through local conservation groups. Many local councils also have reporting systems for pest animals in urban/rural areas.</li>
-                    <li><strong>Marine Mammal Sightings:</strong> For live marine mammal strandings or urgent concerns, contact DOC. For general sightings, you can contribute to citizen science by reporting them to organizations like Orca Research Trust or DOC's marine mammal database.</li>
-                </ul>
-
-                <h3>For Environmental Issues:</h3>
-                <ul>
-                    <li><strong>Pollution or Illegal Dumping:</strong> Contact your local regional council's pollution hotline or environmental enforcement team. This includes concerns about water pollution, air pollution, or unauthorized waste disposal.</li>
-                    <li><strong>Habitat Destruction/Damage:</strong> Report any unconsented clearing of native bush, damage to wetlands, or coastal erosion concerns to your regional or district council.</li>
-                    <li><strong>Biosecurity Threats:</strong> If you suspect a new invasive plant, insect, or disease that could harm New Zealand's environment, report it to Biosecurity New Zealand's hotline: <strong>0800 80 99 66</strong>.</li>
-                </ul>
-
-                <p style="text-align: center; font-style: italic; margin-top: 30px;">(Please note: This page provides general guidance. Always refer to the specific guidelines and contact information provided by official New Zealand government agencies like DOC or your local council for the most accurate and up-to-date reporting procedures.)</p>
-                <p style="text-align: center; margin-top: 20px;">We are currently developing an integrated reporting form for easier submission directly through this website. Thank you for your patience!</p>
-            </section>
+        <div class="main-content-grid">
+            <div class="left-column">
+                <section class="join-section">
+                    <h2>Get Involved and Be a Kaitiaki!</h2>
+                    <p>There are many ways you can contribute to protecting Aotearoa's unique natural heritage. Whether you have a lot of time or just a little, every effort helps us safeguard our wild heart for future generations.</p>
+                    <h3>Volunteer</h3>
+                    <p>Join a local conservation group for practical work like pest trapping, planting native trees, or weeding. Check the Department of Conservation (DOC) website for opportunities near you, or inquire at local visitor centers.</p>
+                    <h3>Report Sightings or Issues</h3>
+                    <p>If you spot an injured animal, illegal activity, or a new pest plant/animal, please report it. Use our <a href="report.html">Report an Issue</a> page to send us details, or contact DOC directly.</p>
+                    <h3>Donate</h3>
+                    <p>Financial contributions help fund vital conservation projects, from predator control and species recovery programs to research and education. Consider donating to a reputable conservation organization.</p>
+                    <h3>Educate Yourself and Others</h3>
+                    <p>Learn more about New Zealand's unique biodiversity and the threats it faces. Share your knowledge with friends and family, and encourage responsible behavior in nature.</p>
+                    <h3>Be a Responsible Visitor</h3>
+                    <p>When exploring New Zealand's natural areas, remember to 'Leave No Trace.' Stick to marked trails, take all your rubbish with you, and never feed wild animals. Clean your gear to prevent the spread of kauri dieback and other diseases.</p>
+                    <p>Together, as kaitiaki (guardians), we can make a difference!</p>
+                </section>
+                <div class="back-button-container">
+                    <button onclick="location.href='index.html'" style="padding: 10px 20px; font-size: 1em;">Back to Home</button>
+                </div>
+            </div>
         </div>
     </main>
 </body>

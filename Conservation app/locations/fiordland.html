@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fiordland National Park - Protecting Aotearoa's Wild Heart</title>
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <script src="../js/headerScroll.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* CSS specific to location pages */
+        .hero-banner .banner-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+        }
+
+        .main-content-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            box-sizing: border-box;
+        }
+
+        .left-column {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            line-height: 1.7; /* Improved readability */
+        }
+
+        .location-details h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            text-align: center;
+        }
+
+        .location-details h3 {
+            color: #3498db;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-size: 1.8em;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        .location-details img {
+            max-width: 100%;
+            height: auto;
+            display: block; /* Centers the image */
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ddd;
+        }
+
+        .location-details p, .location-details ul {
+            color: #555;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            text-align: justify; /* Justify text for a clean look */
+        }
+
+        .location-details ul {
+            list-style-type: disc;
+            margin-left: 25px;
+            padding-left: 0;
+        }
+
+        .location-details ul li {
+            margin-bottom: 8px;
+        }
+
+        /* Back button styling */
+        .back-button-container {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #2980b9;
+        }
+
+        @media (max-width: 768px) {
+            .main-content-grid {
+                padding: 15px;
+                margin: 15px auto;
+            }
+            .location-details h2 {
+                font-size: 2em;
+            }
+            .location-details h3 {
+                font-size: 1.5em;
+            }
+            .location-details p, .location-details ul {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body class="full-page">
+
+    <div class="blurred-background"></div>
+
+    <header class="hero-banner">
+        <div class="banner-content">
+            <h1>Explore Aotearoa's Natural Wonders</h1>
+            <div class="hero-buttons">
+                <button onclick="location.href='../index.html'">Home</button>
+                <button onclick="location.href='../threats.html'">Pests & Threats</button>
+                <button onclick="location.href='../report.html'">Report an Issue</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="page">
+        <div class="main-content-grid">
+            <div class="left-column">
+                <section class="location-details">
+                    <h2>Fiordland National Park</h2>
+                    <img src="../images/fiordland.jpg" alt="Fiordland National Park" />
+
+                    <h3>Overview and Significance</h3>
+                    <p>The Fiordland National Park, situated in the southwest corner of New Zealand's South Island, is a place of truly epic scale and beauty. Spanning over 1.2 million hectares, it is **the largest national park in Aotearoa (New Zealand)**. Its immense landscapes were sculpted over millions of years by glacial activity, creating a region of unparalleled natural grandeur.</p>
+                    <p>Established as a National Park in 1952, its global significance was recognized in 1986 when it was declared a **UNESCO World Heritage Area** as part of Te Wāhipounamu – South West New Zealand. This status highlights its outstanding universal value, particularly for its geological features and unique biodiversity.</p>
+
+                    <h3>Geology and Famous Fiords</h3>
+                    <p>Fiordland is best known for its deep, narrow fiords, which are long, narrow, deep inlets of the sea between high, steep-sided cliffs formed by glaciers. Unlike typical fjords found elsewhere, Fiordland's unique geology means many of its fiords boast a freshwater layer sitting atop saltwater, leading to distinct ecosystems:</p>
+                    <ul>
+                        <li>Milford Sound: Arguably the most famous, often described as the "Eighth Wonder of the World." It's characterized by sheer cliffs, cascading waterfalls (like Stirling Falls and Bowen Falls), and the iconic Mitre Peak. Despite its name, Milford Sound is technically a fiord.</li>
+                        <li>Doubtful Sound: Larger and deeper than Milford, Doubtful Sound offers a more tranquil and remote experience. Its vastness and numerous arms create a sense of profound wilderness, often visited via multi-day cruises.</li>
+                    </ul>
+                    <p>The dramatic landscape includes towering mountains, ancient rainforests clinging to sheer rock faces, and pristine lakes such as Lake Te Anau and Lake Manapouri.</p>
+
+                    <h3>Untouched Wilderness and Biodiversity</h3>
+                    <p>A significant portion of Fiordland's vast land remains largely untouched by human activity, ensuring the preservation of its primeval forests and unique ecosystems. This remoteness provides a critical sanctuary for many of New Zealand's rarest and most endangered native species, some of which are found nowhere else on Earth. The park is a stronghold for various flightless birds, unique insects, and ancient flora.</p>
+
+                    <h3>Visitor Experience and Activities</h3>
+                    <p>Fiordland offers an array of experiences for adventurers and nature lovers:</p>
+                    <ul>
+                        <li>Cruises: Explore Milford and Doubtful Sounds by boat for breathtaking views of waterfalls, wildlife (seals, dolphins, penguins), and the sheer scale of the fiords.</li>
+                        <li>Hiking (Tramping): Home to several of New Zealand's Great Walks, including the famous Milford Track, Routeburn Track (partially), and Kepler Track. These multi-day hikes offer unparalleled immersion in the wilderness.</li>
+                        <li>Kayaking: Paddle through the serene waters of the fiords for an intimate perspective of the landscape.</li>
+                        <li>Scenic Flights:Experience the grandeur of Fiordland from above, with stunning aerial views of mountains, fiords, and glaciers.</li>
+                    </ul>
+                    <p>The park is a testament to New Zealand's commitment to conservation, inviting visitors to experience its raw, untamed beauty while supporting its preservation for future generations.</p>
+                </section>
+                <div class="back-button-container">
+                    <a href="../explore.html" class="back-button">Back to Explore</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

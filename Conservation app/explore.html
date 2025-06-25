@@ -1,118 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Explore Nature</title>
-  <link rel="stylesheet" href="styles/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore Nature - Protecting Aotearoa's Wild Heart</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script src="js/headerScroll.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-  <style>
-    /* Specific styles for the animal cards section */
-    .animal-cards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 20px 0;
-    }
+    <style>
+        /* CSS specific to explore.html */
 
-    /* Style for the clickable card container */
-    .animal-card-link {
-        text-decoration: none;
-        color: inherit;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 100%;
-    }
+        /* Centering the hero banner content */
+        .hero-banner .banner-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+        }
 
-    .animal-card {
-      flex: 0 0 calc(33.333% - 20px);
-      box-sizing: border-box;
-      text-align: center;
-      padding: 15px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      background-color: #fff;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    }
+        /* Styling for the main content grid */
+        .main-content-grid {
+            display: grid;
+            grid-template-columns: 1fr; /* Single column layout for explore page */
+            gap: 30px;
+            padding: 20px;
+            max-width: 1200px; /* Limit content width */
+            margin: 20px auto; /* Center the grid */
+            box-sizing: border-box;
+        }
 
-    /* Hover effect for the cards */
-    .animal-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-        cursor: pointer;
-    }
+        .left-column {
+            /* This will naturally take full width as it's the only column */
+            background-color: #ffffff; /* Example background */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
 
-    .animal-card img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 4px;
-      margin-bottom: 10px;
-    }
+        /* Styles for the introductory section */
+        .explore-intro-section { /* Class for specific targeting */
+            text-align: center; /* This will center the paragraph text */
+            margin-bottom: 30px;
+        }
 
-    /* Media queries for responsiveness */
-    @media (max-width: 900px) {
-      .animal-card {
-        flex: 0 0 calc(50% - 20px); /* 2 cards per row on medium screens */
-      }
-    }
+        .explore-intro-section h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 2.2em;
+        }
 
-    @media (max-width: 600px) {
-      .animal-card {
-        flex: 0 0 calc(100% - 20px); /* 1 card per row on very small screens */
-      }
-    }
-  </style>
+        .explore-intro-section p {
+            color: #555;
+            line-height: 1.6;
+            max-width: 800px; /* Optional: limit width of paragraph for readability */
+            margin: 0 auto 20px auto; /* Center paragraph and add bottom margin */
+        }
 
+        /* Updated styles for animal and location cards grid: fixed width columns and centered */
+        .animal-cards-grid,
+        .location-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 260px);
+            justify-content: center; /* Center the grid */
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .animal-card,
+        .location-card {
+            width: 260px; /* Fixed width to match grid columns */
+            background-color: #fcfcfc;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            cursor: pointer;
+            display: flex; /* Use flexbox for card content */
+            flex-direction: column;
+            height: 300px; /* Fixed height for consistent card size */
+            box-sizing: border-box;
+        }
+
+        .animal-card:hover,
+        .location-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .animal-card a,
+        .location-card a {
+            text-decoration: none;
+            color: inherit;
+            display: flex; /* Make the entire card clickable, and its content flex */
+            flex-direction: column;
+            height: 100%; /* Ensure link takes full height of the card */
+        }
+
+        .animal-card img,
+        .location-card img {
+            width: 100%; /* Full width */
+            height: 150px; /* Fixed height for uniformity */
+            object-fit: cover; /* Crop & fill */
+            border-radius: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            flex-shrink: 0; /* Prevent image from shrinking */
+        }
+
+        .animal-card h3,
+        .location-card h3 {
+            font-size: 1.3em;
+            color: #3498db;
+            margin-bottom: 5px;
+            flex-shrink: 0; /* Prevent heading from shrinking */
+        }
+
+        .animal-card p,
+        .location-card p {
+            font-size: 0.85em;
+            color: #777;
+            margin-top: 0;
+            line-height: 1.4;
+            flex-grow: 1; /* Allow paragraph to grow and fill remaining space if needed */
+
+            /* --- Limit lines and add ellipsis for consistency --- */
+            display: -webkit-box;
+            -webkit-line-clamp: 3; /* Limit to 3 lines */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            /* ---------------------------------------------------- */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .main-content-grid {
+                padding: 15px;
+                margin: 15px auto;
+            }
+
+            .animal-cards-grid,
+            .location-cards-grid {
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .animal-card img,
+            .location-card img {
+                height: auto; /* Still auto for smaller screens, scales with width */
+            }
+
+            .animal-card,
+            .location-card {
+                width: 100%; /* Full width on small screens */
+                height: 250px; /* Adjust fixed height for smaller screens */
+            }
+        }
+
+    </style>
 </head>
 <body class="full-page">
-  <div class="blurred-background"></div>
 
-  <header class="hero-banner">
-    <div class="banner-content">
-      <h1>Explore Nature</h1>
-      <div class="hero-buttons">
-        <button onclick="location.href='index.html'">Home</button>
-        <button onclick="location.href='threats.html'">Pests & Threats</button>
-        <button onclick="location.href='report.html'">Report an Issue</button>
-      </div>
-    </div>
-  </header>
+    <div class="blurred-background"></div>
 
-  <main class="page">
-    <section>
-      <h2>Parks, Forests & Wildlife</h2>
-      <p>Discover New Zealand's national parks, native forests, and unique wildlife. Learn where to go and what you might see.</p>
-    </section>
-
-    <section class="animal-section">
-        <h2>Native Animals</h2>
-        <div class="animal-cards">
-            <div class="animal-card">
-                <a href="animals/kea.html" class="animal-card-link">
-                    <h3>Kea</h3>
-                    <img src="images/kea.png" alt="Kea">
-                    <p>A smart alpine parrot known for its curiosity and playfulness.</p>
-                </a>
-            </div>
-            <div class="animal-card">
-                <a href="animals/whio.html" class="animal-card-link">
-                    <h3>Blue Duck / Whio</h3>
-                    <img src="images/blue.jpg" alt="Blue Duck">
-                    <p>A rare river duck found only in fast-flowing streams in New Zealand</p>
-                </a>
-            </div>
-            <div class="animal-card">
-                <a href="animals/kokako.html" class="animal-card-link"> <!-- Fixed typo: class="class="animal-card-link"" -->
-                    <h3>Kokako</h3>
-                    <img src="images/kokako.jpg" alt="Kokako">
-                    <p>Famous for it's haunting song, the kokako is a shy forest bird with blue wattles.</p>
-                </a>
+    <header class="hero-banner">
+        <div class="banner-content">
+            <h1>Explore Aotearoa's Natural Wonders</h1>
+            <div class="hero-buttons">
+                <button onclick="location.href='index.html'">Home</button>
+                <button onclick="location.href='threats.html'">Pests & Threats</button>
+                <button onclick="location.href='report.html'">Report an Issue</button>
             </div>
         </div>
-    </section>
-  </main>
+    </header>
+
+    <main class="page">
+        <div class="main-content-grid">
+            <div class="left-column">
+                <section class="explore-intro-section">
+                    <h2>Explore New Zealand's Nature</h2>
+                    <p>Discover New Zealand's national parks, native forests, and unique wildlife. Learn where to go and what you might see.</p>
+                </section>
+
+                <section class="animals-section">
+                    <h2>Animals of Aotearoa</h2>
+                    <div class="animal-cards-grid">
+                        <div class="animal-card">
+                            <a href="animals/kea.html">
+                                <img src="images/kea.png" alt="Kea" />
+                                <h3>Kea</h3>
+                                <p>The world's only alpine parrot, known for its intelligence and curiosity.</p>
+                            </a>
+                        </div>
+                        <div class="animal-card">
+                            <a href="animals/whio.html">
+                                <img src="images/blue.jpg" alt="Blue Duck / Whio" />
+                                <h3>Whio (Blue Duck)</h3>
+                                <p>A unique river duck adapted to fast-flowing mountain streams.</p>
+                            </a>
+                        </div>
+                        <div class="animal-card">
+                            <a href="animals/kokako.html">
+                                <img src="images/kokako.jpg" alt="Kokako" />
+                                <h3>Kōkako</h3>
+                                <p>An iconic forest bird with a hauntingly beautiful song and distinctive wattles.</p>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="locations-section">
+                    <h2>Iconic Natural Locations</h2>
+                    <div class="location-cards-grid">
+                        <div class="location-card">
+                            <a href="locations/fiordland_national_park.html">
+                                <img src="images/fiordland.jpg" alt="Fiordland National Park" />
+                                <h3>Fiordland National Park</h3>
+                                <p>New Zealand's largest national park, known for its majestic fiords and untouched wilderness.</p>
+                            </a>
+                        </div>
+                        <div class="location-card">
+                            <a href="locations/kapiti_island.html">
+                                <img src="images/kapiti.png" alt="Kapiti Island" />
+                                <h3>Kapiti Island</h3>
+                                <p>An accessible island bird sanctuary offering guaranteed encounters with rare native birds.</p>
+                            </a>
+                        </div>
+                        <div class="location-card">
+                            <a href="locations/routeburn_track_and_huts.html">
+                                <img src="images/routeburn.jpg" alt="Routeburn Track" />
+                                <h3>Routeburn Track & Huts</h3>
+                                <p>One of Aotearoa's Great Walks, famous for stunning lake views and mountainous landscapes.</p>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
 </body>
 </html>

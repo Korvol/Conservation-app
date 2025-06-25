@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Routeburn Track and Huts - Protecting Aotearoa's Wild Heart</title>
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <script src="../js/headerScroll.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* CSS specific to location pages - (Same as Fiordland, can be moved to a shared stylesheet) */
+        .hero-banner .banner-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+        }
+
+        .main-content-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            box-sizing: border-box;
+        }
+
+        .left-column {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            line-height: 1.7;
+        }
+
+        .location-details h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            text-align: center;
+        }
+
+        .location-details h3 {
+            color: #3498db;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-size: 1.8em;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        .location-details img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ddd;
+        }
+
+        .location-details p, .location-details ul {
+            color: #555;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .location-details ul {
+            list-style-type: disc;
+            margin-left: 25px;
+            padding-left: 0;
+        }
+
+        .location-details ul li {
+            margin-bottom: 8px;
+        }
+
+        /* Back button styling */
+        .back-button-container {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #2980b9;
+        }
+
+        @media (max-width: 768px) {
+            .main-content-grid {
+                padding: 15px;
+                margin: 15px auto;
+            }
+            .location-details h2 {
+                font-size: 2em;
+            }
+            .location-details h3 {
+                font-size: 1.5em;
+            }
+            .location-details p, .location-details ul {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body class="full-page">
+
+    <div class="blurred-background"></div>
+
+    <header class="hero-banner">
+        <div class="banner-content">
+            <h1>Explore Aotearoa's Natural Wonders</h1>
+            <div class="hero-buttons">
+                <button onclick="location.href='../index.html'">Home</button>
+                <button onclick="location.href='../threats.html'">Pests & Threats</button>
+                <button onclick="location.href='../report.html'">Report an Issue</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="page">
+        <div class="main-content-grid">
+            <div class="left-column">
+                <section class="location-details">
+                    <h2>Routeburn Track and Huts</h2>
+                    <img src="../images/routeburn.jpg" alt="Routeburn Track" />
+
+                    <h3>One of Aotearoa's Great Walks</h3>
+                    <p>The Routeburn Track stands as one of New Zealand's premier "Great Walks," renowned globally for its stunning lake views, ancient native forests, and dramatic mountainous landscapes. This iconic multi-day tramp (hike) typically takes 2-4 days to complete and spans 33km one way, connecting the head of Lake Wakatipu in Mount Aspiring National Park with The Divide on the Milford Road in Fiordland National Park.</p>
+                    <p>The best time to walk the track is during the Great Walks season, which runs from November to April. During this period, weather conditions are generally more stable, and Department of Conservation (DOC) huts and facilities are fully operational, offering a safer and more enjoyable experience. Outside of this season, conditions can be extremely challenging due to snow, ice, and rapidly changing weather.</p>
+
+                    <h3>Diverse Landscapes and Highlights</h3>
+                    <p>The Routeburn Track offers an incredibly diverse hiking experience, traversing through a range of ecosystems and geological formations:</p>
+                    <ul>
+                        <li>Lush Beech Forests: The lower sections wind through dense, ancient beech forests, rich with mosses, ferns, and native birdlife.</li>
+                        <li>Alpine Meadows: As the track climbs, hikers emerge into spectacular subalpine tussock grasslands and meadows, particularly vibrant in spring and early summer.</li>
+                        <li>Mountain Passes: The track crosses two impressive mountain passes: Key Summit (offering panoramic views) and Harris Saddle (the highest point on the track at 1,255m), both providing breathtaking vistas of surrounding peaks and valleys.</li>
+                        <li>Stunning Lakes: Key highlights include the turquoise waters of Lake Mackenzie, Lake Harris, and Lake Howden, often reflecting the dramatic mountain scenery.</li>
+                        <li>Waterfalls and Rivers: Numerous waterfalls cascade down the rock faces, and the vibrant blue waters of the Route Burn river itself are a constant companion.</li>
+                    </ul>
+
+                    <h3>Huts and Campsites</h3>
+                    <p>Accommodation along the Routeburn Track is provided by the Department of Conservation's well-maintained huts and designated campsites. Bookings are essential and often sell out months in advance, especially for the Great Walks season. The track features:</p>
+                    <ul>
+                        <li>3 Huts: Routeburn Flats Hut, Routeburn Falls Hut, and Lake Mackenzie Hut. The Lake Mackenzie Hut, with a capacity for 50 people, is particularly popular due to its stunning lakeside location.</li>
+                        <li>2 Campsites: Routeburn Flats Campsite and Lake Mackenzie Campsite, offering a more rustic experience for those with their own tents.</li>
+                    </ul>
+                    <p>The Routeburn Track is celebrated not just for its physical challenge, but for its profound connection to New Zealand's pristine wilderness, making it an unforgettable journey for thousands of trampers each year.</p>
+                </section>
+                <div class="back-button-container">
+                    <a href="../explore.html" class="back-button">Back to Explore</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

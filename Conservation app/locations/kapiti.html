@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kapiti Island - Protecting Aotearoa's Wild Heart</title>
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <script src="../js/headerScroll.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* CSS specific to location pages - (Same as Fiordland, can be moved to a shared stylesheet) */
+        .hero-banner .banner-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+        }
+
+        .main-content-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            box-sizing: border-box;
+        }
+
+        .left-column {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            line-height: 1.7;
+        }
+
+        .location-details h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            text-align: center;
+        }
+
+        .location-details h3 {
+            color: #3498db;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-size: 1.8em;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        .location-details img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ddd;
+        }
+
+        .location-details p, .location-details ul {
+            color: #555;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .location-details ul {
+            list-style-type: disc;
+            margin-left: 25px;
+            padding-left: 0;
+        }
+
+        .location-details ul li {
+            margin-bottom: 8px;
+        }
+
+        /* Back button styling */
+        .back-button-container {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #2980b9;
+        }
+
+        @media (max-width: 768px) {
+            .main-content-grid {
+                padding: 15px;
+                margin: 15px auto;
+            }
+            .location-details h2 {
+                font-size: 2em;
+            }
+            .location-details h3 {
+                font-size: 1.5em;
+            }
+            .location-details p, .location-details ul {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body class="full-page">
+
+    <div class="blurred-background"></div>
+
+    <header class="hero-banner">
+        <div class="banner-content">
+            <h1>Explore Aotearoa's Natural Wonders</h1>
+            <div class="hero-buttons">
+                <button onclick="location.href='../index.html'">Home</button>
+                <button onclick="location.href='../threats.html'">Pests & Threats</button>
+                <button onclick="location.href='../report.html'">Report an Issue</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="page">
+        <div class="main-content-grid">
+            <div class="left-column">
+                <section class="location-details">
+                    <h2>Kapiti Island</h2>
+                    <img src="../images/kapiti.png" alt="Kapiti Island" />
+
+                    <h3>A Sanctuary for Rare Birds</h3>
+                    <p>Kapiti Island, located just 5 kilometers off the Kapiti Coast, is one of New Zealand's most significant and accessible nature reserves, specifically designated as a predator-free island bird sanctuary. Its protected status means it serves as a critical stronghold for many of New Zealand's rarest and most endangered native bird species, providing them a safe haven from introduced predators like stoats, rats, and possums.</p>
+                    <p>The island was declared a nature reserve in 1897, making it one of the country's oldest and most successful conservation efforts. Over the decades, intensive conservation work has transformed it into a vibrant ecosystem where native flora and fauna can thrive undisturbed.</p>
+
+                    <h3>Visitor Access and Guaranteed Encounters</h3>
+                    <p>While relatively accessible, visitor numbers to Kapiti Island are strictly controlled to protect its delicate environment. Access is granted only via approved tour operators, who manage daily permits and ensure strict biosecurity protocols are followed. This ensures no pests are inadvertently introduced to the island, safeguarding its precious bird populations.</p>
+                    <p>For those fortunate enough to visit, the experience is truly unique. You have an almost guaranteed chance to encounter wild, endemic birds up close, many of which are rarely seen on the mainland:</p>
+                    <ul>
+                        <li>Kākā (bush parrot): Known for their playful nature and distinctive squawks, often seen flying overhead or foraging in trees.</li>
+                        <li>Takahē: A critically endangered, flightless bird, once thought extinct, now thriving on Kapiti Island. Spotting one of these large, colourful birds is a true highlight.</li>
+                        <li>Kōkako: Famous for its hauntingly beautiful song and distinctive blue wattles, these birds are frequently heard and often seen among the forest canopy.</li>
+                        <li>Little Spotted Kiwi: While nocturnal and elusive, Kapiti Island holds the largest wild population of this kiwi species. Night tours offer a chance to hear or even spot one.</li>
+                    </ul>
+
+                    <h3>Walking Tracks and Island Experience</h3>
+                    <p>The island features two primary walking tracks. The main track leads to the **summit of Tuteremoana (521m)**, offering spectacular panoramic views of the Kapiti Coast, the Marlborough Sounds, and even Mount Ruapehu on a clear day. This track provides excellent opportunities for bird watching amidst regenerating native bush.</p>
+                    <p>One of the island's tracks is typically closed for half the year to protect sensitive nesting birds, highlighting the Department of Conservation's commitment to prioritizing the wildlife's needs. A visit to Kapiti Island offers not just a glimpse into New Zealand's natural heritage, but also a deep appreciation for the country's dedicated conservation efforts.</p>
+                </section>
+                <div class="back-button-container">
+                    <a href="../explore.html" class="back-button">Back to Explore</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

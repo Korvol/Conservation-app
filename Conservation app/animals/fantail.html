@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>All About the Kōkako - Protecting Aotearoa's Wild Heart</title>
+    <title>Fantail (Pīwakawaka) - Protecting Aotearoa's Wild Heart</title>
     <link rel="stylesheet" href="../styles/styles.css" />
+    <script src="../js/headerScroll.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <style>
-        /* Page-specific styles for kokako.html banner and content - kept consistent with other animal pages */
+        /* Page-specific styles for animal pages (consistent with whio.html) */
         html, body {
             margin: 0;
             padding: 0;
@@ -16,7 +17,7 @@
             overflow-x: hidden;
         }
 
-        /* Banner Specific Styles for kokako.html */
+        /* Banner Specific Styles */
         .hero-banner {
             position: relative;
             top: 0;
@@ -72,10 +73,12 @@
             justify-content: center;
         }
 
+        /* Styling for buttons within the hero banner */
         .hero-banner .hero-buttons button {
             padding: 10px 20px;
             font-size: 1em;
             margin: 0;
+            /* Other button styles like background-color, color, border, etc., will be inherited from styles.css */
         }
 
         /* Main page content area */
@@ -100,8 +103,8 @@
             z-index: 0;
         }
 
-        /* Page-specific styles for kokako.html content */
-        .kokako-content { /* Renamed from kea-content/whio-content for clarity */
+        /* Page-specific styles for content area (using whio-content naming convention) */
+        .whio-content {
             max-width: 900px;
             margin: 40px auto;
             padding: 0 20px;
@@ -109,40 +112,40 @@
             color: #333;
         }
 
-        .kokako-content h1, .kokako-content h2, .kokako-content h3 {
+        .whio-content h1, .whio-content h2, .whio-content h3 {
             color: #2c3e50;
             margin-top: 30px;
             margin-bottom: 15px;
             text-align: center;
         }
 
-        .kokako-content h1 {
+        .whio-content h1 {
             font-size: 2.5em;
         }
 
-        .kokako-content h2 {
+        .whio-content h2 {
             font-size: 2em;
             border-bottom: 2px solid #e0e0e0;
             padding-bottom: 5px;
         }
 
-        .kokako-intro {
+        .whio-intro {
             display: flex;
             flex-direction: column;
             align-items: center;
             margin-bottom: 30px;
         }
 
-        .kokako-intro img {
+        .whio-intro img {
             max-width: 100%;
-            width: 500px;
+            width: 500px; /* Consistent image width */
             height: auto;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             margin-bottom: 20px;
         }
 
-        .kokako-facts-grid { /* Renamed from kea-facts-grid/whio-facts-grid */
+        .whio-facts-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
@@ -165,13 +168,13 @@
             margin-bottom: 10px;
         }
 
-        .kokako-content ul {
+        .whio-content ul {
             list-style-type: disc;
             margin-left: 20px;
             padding-left: 0;
         }
 
-        .kokako-content li {
+        .whio-content li {
             margin-bottom: 8px;
         }
 
@@ -235,17 +238,17 @@
             }
 
             /* Content adjustments for smaller screens */
-            .kokako-content {
+            .whio-content {
                 margin: 20px auto;
                 padding: 0 15px;
             }
-            .kokako-content h1 {
+            .whio-content h1 {
                 font-size: 2em;
             }
-            .kokako-content h2 {
+            .whio-content h2 {
                 font-size: 1.6em;
             }
-            .kokako-facts-grid {
+            .whio-facts-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -257,7 +260,7 @@
 
     <header class="hero-banner">
         <div class="banner-content">
-            <h1>Kōkako</h1>
+            <h1>Fantail (Pīwakawaka)</h1>
             <div class="hero-buttons">
                 <button onclick="location.href='../index.html'">Home</button>
                 <button onclick="location.href='../explore.html'">Explore Nature</button>
@@ -268,80 +271,83 @@
     </header>
 
     <main class="page">
-        <div class="kokako-content">
-            <h1>All About the Kōkako</h1>
+        <div class="whio-content">
+            <h1>All About the Fantail (Pīwakawaka)</h1>
 
-            <section class="kokako-intro">
-                <img src="../images/kokako.jpg" alt="A Kōkako bird perched on a branch, showcasing its blue wattles.">
-                <p>The Kōkako (scientific name: <em>Callaeas cinerea</em>) is an endemic species to Aotearoa known for their very distinct birdsong. They belong to the same family of wattlebirds as the Tīeke (Saddleback) and the extinct and popularly known Huia.</p>
+            <section class="whio-intro">
+                <img src="../images/fantail.jpg" alt="A New Zealand Fantail (Pīwakawaka) in flight, showing its fanned tail.">
+                <p>The Fantail (<em>Rhipidura fuliginosa</em>), or Pīwakawaka in Māori, is one of New Zealand's most common and easily recognizable native birds. Famous for its acrobatic flight and distinctive fanned tail, it is a familiar and cherished sight in forests, parks, and even urban gardens across the country. Their friendly nature and inquisitive calls make them popular among nature enthusiasts.</p>
+                <p>Fantails are highly active insectivores, constantly flitting and darting to catch flying insects on the wing. They often hover close to humans or animals, using the movement to stir up hidden insects, which they then swiftly snatch. Their rapid, unpredictable movements are a key part of their charm and their hunting strategy.</p>
             </section>
 
             <section>
                 <h2>Key Facts & Characteristics</h2>
-                <div class="kokako-facts-grid">
+                <div class="whio-facts-grid">
                     <div class="fact-card">
-                        <h3>Two Species</h3>
-                        <p>There are two species of Kōkako, one for each main island: the North Island Kōkako (<em>Callaeas cinerea wilsoni</em>) and the South Island Kōkako (<em>Callaeas cinerea cinerea</em>).</p>
+                        <h3>Acrobatic Flight</h3>
+                        <p>Known for their highly maneuverable and erratic flight patterns, fantails dart and weave through the air to catch insects with remarkable agility.</p>
                     </div>
                     <div class="fact-card">
-                        <h3>Distinct Birdsong</h3>
-                        <p>Kōkako are renowned for their hauntingly beautiful, organ-like song that echoes through the native forests, a truly unique sound of the New Zealand bush.</p>
+                        <h3>Distinctive Fanned Tail</h3>
+                        <p>Their most prominent feature is their broad, fan-like tail, which they use as a rudder and brake during their aerial acrobatics.</p>
                     </div>
                     <div class="fact-card">
-                        <h3>Wattlebird Family</h3>
-                        <p>They are part of New Zealand's endemic wattlebird family, distinguished by fleshy wattles on either side of their beak.</p>
+                        <h3>Insectivorous Diet</h3>
+                        <p>Fantails primarily feed on small flying insects like mosquitoes, flies, and moths, which they catch mid-air.</p>
                     </div>
                     <div class="fact-card">
-                        <h3>Habitat Preference</h3>
-                        <p>North Island Kōkako are commonly found in native forest in the central North Island, while the South Island Kōkako would typically inhabit beech forests on both sides of the Southern Alps.</p>
+                        <h3>Friendly & Inquisitive</h3>
+                        <p>They are famously unafraid of humans and often approach closely, flitting around to catch insects disturbed by movement, earning them a reputation for being friendly.</p>
                     </div>
                     <div class="fact-card">
-                        <h3>Weak Flight</h3>
-                        <p>Kōkako are not strong fliers; they prefer to move through the canopy by hopping and gliding, using their powerful legs.</p>
+                        <h3>Rapid Breeding</h3>
+                        <p>Fantails have a high breeding rate, laying multiple clutches of eggs throughout the breeding season, which contributes to their resilience.</p>
                     </div>
                 </div>
             </section>
 
             <section>
                 <h2>Conservation Status & Population</h2>
-                <p>Official numbers confirm the North Island Kōkako is **Nationally Increasing** and currently has around **2,300 pairs** in the wild. This positive trend is a result of dedicated conservation efforts.</p>
-                <p>However, there is no census data available for the South Island Kōkako, suggesting it might be extinct or exists in a very low population, as there has been no official sighting since 2007. Its status remains precarious.</p>
+                <p>Unlike many of New Zealand's native birds, the Fantail's conservation status is generally **Not Threatened**. Their populations are widespread and robust, and they have adapted well to modified environments, including urban areas and exotic forests, alongside native bush.</p>
+                <p>Their high breeding rate and ability to adapt to various habitats have allowed them to thrive even with the presence of introduced predators, which have decimated other native bird species. While local populations can fluctuate, the overall outlook for the fantail is positive.</p>
             </section>
 
             <section>
-                <h2>Threats to the Kōkako</h2>
-                <p>The primary threats for the Kōkako, especially the recovering North Island population, include:</p>
+                <h2>Threats to the Fantail</h2>
+                <p>Despite their commonality, fantails still face some threats, particularly from introduced predators:</p>
                 <ul>
-                    <li><strong>Predation:</strong> Introduced mammalian predators such as stoats, possums, and rats are the main danger, preying on eggs, chicks, and adult birds.</li>
-                    <li><strong>Natural Competition for Food:</strong> Competition from introduced species or other native birds for limited food resources can also impact their survival and breeding success.</li>
-                    <li><strong>Habitat Loss & Fragmentation:</strong> While not as current a primary threat as predation for North Island Kōkako in protected areas, historical deforestation and fragmented habitats remain long-term challenges.</li>
+                    <li><strong>Predation:</strong> Introduced mammals like cats (especially feral and stray cats) and stoats can prey on fantails, especially chicks and nesting adults. Rats can also pose a threat to nests.</li>
+                    <li><strong>Habitat Loss:</strong> While adaptable, extensive deforestation and habitat fragmentation can still negatively impact local populations, particularly by reducing insect food sources and safe nesting sites.</li>
+                    <li><strong>Pesticides:</strong> Widespread use of insecticides can reduce their primary food source, potentially impacting fantail health and breeding success.</li>
                 </ul>
             </section>
 
             <section>
                 <h2>Where to See Them</h2>
-                <p>To experience the Kōkako and its incredible song, you'll need to visit areas where intensive conservation efforts have allowed their populations to recover. These include:</p>
+                <p>Fantails are ubiquitous throughout New Zealand and are one of the easiest native birds to spot. You can see them in almost any environment where there are trees or shrubs:</p>
                 <ul>
-                    <li><strong>Mainland Islands:</strong> Protected areas within larger forests where predator control is active, such as Boundary Stream Mainland Island (Hawke's Bay) and Pureora Forest Park (Waikato).</li>
-                    <li><strong>Predator-Free Islands:</strong> Islands like Tiritiri Matangi Island (Hauraki Gulf) and Kapiti Island are safe havens where Kōkako thrive and are more easily spotted.</li>
+                    <li><strong>Native Forests & Bush:</strong> Common in all types of native bush.</li>
+                    <li><strong>Parks & Gardens:</strong> Frequently visit urban and suburban parks, gardens, and even city streets with trees.</li>
+                    <li><strong>Farmland & Rural Areas:</strong> Often seen flitting around farm buildings or shelterbelts.</li>
+                    <li><strong>Coastal Areas:</strong> Found in coastal scrub and dune environments.</li>
                 </ul>
-                <p>For the best chance of hearing their famous song, visit at dawn or dusk. Remember to remain quiet and observe them from a distance to avoid disturbance.</p>
+                <p>Simply spending time outdoors in New Zealand will likely bring you into contact with these charming and energetic birds.</p>
             </section>
 
             <section>
                 <h2>Conservation Efforts</h2>
-                <p>The positive trend for the North Island Kōkako is a direct result of ongoing and effective conservation strategies:</p>
+                <p>While not as critically endangered as other species, conservation efforts still benefit fantails indirectly and directly:</p>
                 <ul>
-                    <li><strong>Intensive Predator Control:</strong> Large-scale trapping and baiting programs are continually implemented in Kōkako habitats to suppress predator numbers.</li>
-                    <li><strong>Habitat Management:</strong> Maintaining and restoring the health of their native forest environments is crucial for providing adequate food and nesting sites.</li>
-                    <li><strong>Translocation Programs:</strong> Moving Kōkako to new, secure, predator-free locations has been vital in establishing new populations and increasing genetic diversity.</li>
-                    <li><strong>Monitoring and Research:</strong> Ongoing scientific research and population monitoring help conservationists understand Kōkako ecology and adapt strategies for best outcomes.</li>
+                    <li><strong>Predator Control:</strong> Broad predator control initiatives targeting rats, stoats, and possums in conservation areas and urban backyard trapping programs benefit all native bird species, including fantails, by reducing predator pressure.</li>
+                    <li><strong>Habitat Restoration:</strong> Planting native trees and shrubs in urban areas and rural landscapes provides essential habitat, nesting sites, and insect food sources for fantails.</li>
+                    <li><strong>Responsible Pet Ownership:</strong> Educating cat owners about responsible pet management (e.g., bell collars, keeping cats indoors at night) helps reduce predation on birds.</li>
+                    <li><strong>Pest Management:</strong> Promoting integrated pest management practices that minimize the use of broad-spectrum insecticides helps maintain healthy insect populations for fantails.</li>
                 </ul>
-                <p>These combined efforts are essential for safeguarding the future of this unique New Zealand forest bird.</p>
+                <p>The continued health of fantail populations is a good indicator of overall environmental well-being in many parts of New Zealand.</p>
             </section>
 
             <p style="text-align: center; margin-top: 50px;">
-                <button onclick="location.href='../explore.html'" style="padding: 10px 20px; font-size: 1em;">Back to Explore Nature</button>
+                <button onclick="location.href='../pages/wildlife_overview.html'" style="padding: 10px 20px; font-size: 1em;">Back to Wildlife Overview</button>
             </p>
         </div>
     </main>

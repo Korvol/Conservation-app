@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All About the Whio (Blue Duck) - Protecting Aotearoa's Wild Heart</title>
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* Page-specific styles for whio.html banner and content - kept consistent with kea.html */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow-x: hidden;
+        }
+
+        /* Banner Specific Styles for whio.html */
+        .hero-banner {
+            position: relative;
+            top: 0;
+            height: 350px;
+            max-height: 400px;
+            overflow: hidden;
+            padding: 50px 20px;
+            background-position: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            flex-direction: column;
+            z-index: 10;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        .hero-banner::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .hero-banner .banner-content {
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-banner h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            margin-right: 0;
+            white-space: normal;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-banner .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .hero-banner .hero-buttons button {
+            padding: 10px 20px;
+            font-size: 1em;
+            margin: 0;
+        }
+
+        /* Main page content area */
+        .page {
+            margin-top: 0;
+            background-color: rgba(255, 255, 255, 1);
+            position: relative;
+            z-index: 5;
+            min-height: calc(100vh - 350px); /* Ensure content section at least fills remaining viewport height after banner */
+            padding-bottom: 50px;
+        }
+
+        /* Blurred background */
+        .blurred-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            z-index: 0;
+        }
+
+        /* Page-specific styles for whio.html content */
+        .whio-content { /* Renamed from kea-content for clarity */
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .whio-content h1, .whio-content h2, .whio-content h3 {
+            color: #2c3e50;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .whio-content h1 {
+            font-size: 2.5em;
+        }
+
+        .whio-content h2 {
+            font-size: 2em;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 5px;
+        }
+
+        .whio-intro {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .whio-intro img {
+            max-width: 100%;
+            width: 500px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .whio-facts-grid { /* Renamed from kea-facts-grid */
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .fact-card {
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .fact-card h3 {
+            color: #3498db;
+            font-size: 1.2em;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .whio-content ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding-left: 0;
+        }
+
+        .whio-content li {
+            margin-bottom: 8px;
+        }
+
+        /* Responsive adjustments for banner and content */
+        @media (max-width: 992px) {
+            .page {
+                width: 95%;
+            }
+            /* Banner adjustments for medium screens */
+            .hero-banner {
+                height: 250px;
+                padding: 30px 20px;
+            }
+            .hero-banner h1 {
+                font-size: 2.5em;
+            }
+            .hero-buttons button {
+                padding: 8px 15px;
+                font-size: 0.9em;
+            }
+            .page {
+                min-height: calc(100vh - 250px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            /* Banner adjustments for small screens */
+            .hero-banner {
+                height: auto;
+                min-height: 200px;
+                padding: 20px;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .hero-banner .banner-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .hero-banner h1 {
+                margin-right: 0;
+                margin-bottom: 10px;
+                font-size: 2em;
+                white-space: normal;
+            }
+
+            .hero-banner .hero-buttons {
+                gap: 10px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .hero-banner .hero-buttons button {
+                padding: 6px 12px;
+                font-size: 0.8em;
+            }
+            .page {
+                min-height: calc(100vh - 200px);
+            }
+
+            /* Content adjustments for smaller screens */
+            .whio-content {
+                margin: 20px auto;
+                padding: 0 15px;
+            }
+            .whio-content h1 {
+                font-size: 2em;
+            }
+            .whio-content h2 {
+                font-size: 1.6em;
+            }
+            .whio-facts-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body class="full-page">
+
+    <div class="blurred-background"></div>
+
+    <header class="hero-banner">
+        <div class="banner-content">
+            <h1>Whio (Blue Duck)</h1>
+            <div class="hero-buttons">
+                <button onclick="location.href='../index.html'">Home</button>
+                <button onclick="location.href='../explore.html'">Explore Nature</button>
+                <button onclick="location.href='../threats.html'">Pests & Threats</button>
+                <button onclick="location.href='../report.html'">Report an Issue</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="page">
+        <div class="whio-content">
+            <h1>All About the Whio (Blue Duck)</h1>
+
+            <section class="whio-intro">
+                <img src="../images/blue.jpg" alt="A Whio, or Blue Duck, in its natural river habitat.">
+                <p>The Blue Duck, known in Māori as the <em>Whio</em>, is a remarkable and unique mountain duck endemic to Aotearoa (New Zealand). Unlike most ducks, they are adapted to live in fast-flowing, high-altitude rivers and streams in both the North and South Island mountain regions. Their distinctive blue-grey plumage and soft, whistling call give them their name and make them truly special.</p>
+            </section>
+
+            <section>
+                <h2>Key Facts & Characteristics</h2>
+                <div class="whio-facts-grid">
+                    <div class="fact-card">
+                        <h3>Mountain Dweller</h3>
+                        <p>Whio are one of only four duck species worldwide that are truly specialized for fast-flowing water, using their streamlined bodies and large webbed feet to navigate turbulent rapids.</p>
+                    </div>
+                    <div class="fact-card">
+                        <h3>Unique Bill</h3>
+                        <p>Their soft, fleshy upper bill has a distinctive white 'lip' and is perfectly adapted for scraping insects and larvae off slippery rocks in swift currents.</p>
+                    </div>
+                    <div class="fact-card">
+                        <h3>Camouflage Masters</h3>
+                        <p>Their blue-grey plumage provides excellent camouflage against the grey rocks and clear waters of their river habitats, helping them blend in with their surroundings.</p>
+                    </div>
+                    <div class="fact-card">
+                        <h3>Whistling Call</h3>
+                        <p>Unlike other ducks that quack, the male Whio makes a distinctive high-pitched whistle, which gives the duck its Māori name. Females have a low, rattling call.</p>
+                    </div>
+                    <div class="fact-card">
+                        <h3>Territorial Nature</h3>
+                        <p>Whio pairs are highly territorial, defending their stretch of river year-round. This makes successful breeding crucial for their population.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Conservation Status & Population</h2>
+                <p>There are estimated to be **under 3,000 Whio** left in the wild, with an old 2011 estimate declaring it is unlikely to be more than 1,000 pairs remaining. This makes them a critically vulnerable species, currently listed as **Nationally Vulnerable** within New Zealand.</p>
+                <p>Their dwindling numbers highlight the urgent need for ongoing conservation efforts to protect these unique river ducks.</p>
+            </section>
+
+            <section>
+                <h2>Threats to the Whio</h2>
+                <p>Whio face significant threats that contribute to their endangered status:</p>
+                <ul>
+                    <li><strong>Predation:</strong> Introduced predators such as stoats, ferrets, and cats are the primary threat, preying on eggs, chicks, and adult birds.</li>
+                    <li><strong>Habitat Loss/Degradation:</strong> River development, pollution, hydroelectric schemes, and land-use changes can degrade or destroy their specific river habitats.</li>
+                    <li><strong>General Disturbance:</strong> Human activities like recreational boating, fishing, and kayaking can disturb breeding pairs, causing stress and impacting nesting success.</li>
+                    <li><strong>Flooding:</strong> Natural events like severe floods can wash away nests and disrupt breeding, especially given their riverine habitat.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Where to See Them</h2>
+                <p>Whio are found in clear, fast-flowing rivers within forested catchments in both the North and South Islands. While rare, efforts are being made to establish secure populations in several areas:</p>
+                <ul>
+                    <li><strong>Tongariro Forest:</strong> A key site in the North Island for Whio recovery.</li>
+                    <li><strong>Egmont National Park (Taranaki):</strong> Growing populations due to intensive predator control.</li>
+                    <li><strong>Kahurangi National Park:</strong> Important strongholds in the South Island.</li>
+                    <li><strong>Fiordland National Park:</strong> Remote areas offer natural habitat.</li>
+                </ul>
+                <p>Observing Whio in their natural habitat requires patience and quiet. If you are lucky enough to spot one, remember to keep your distance to avoid disturbing them.</p>
+            </section>
+
+            <section>
+                <h2>Conservation Efforts</h2>
+                <p>Extensive conservation programs are underway to protect the Whio, led by organizations like the Department of Conservation (DOC) and the Whio Forever project:</p>
+                <ul>
+                    <li><strong>Intensive Predator Control:</strong> Large-scale trapping and baiting programs are crucial to reduce predator numbers in Whio habitats.</li>
+                    <li><strong>Habitat Restoration:</strong> Protecting and restoring river ecosystems, including riparian planting, improves their living conditions.</li>
+                    <li><strong>Monitoring and Research:</strong> Tracking populations, breeding success, and threats helps inform conservation strategies.</li>
+                    <li><strong>Captive Breeding and Release:</strong> Whio are bred in captivity and then released into secure "Whio Security Sites" to boost wild numbers.</li>
+                    <li><strong>Public Awareness:</strong> Educating river users and the public about the vulnerability of Whio and how to protect them.</li>
+                </ul>
+                <p>These dedicated efforts are vital to ensure the survival of this iconic and unique New Zealand duck.</p>
+            </section>
+
+            <p style="text-align: center; margin-top: 50px;">
+                <button onclick="location.href='../explore.html'" style="padding: 10px 20px; font-size: 1em;">Back to Explore Nature</button>
+            </p>
+        </div>
+    </main>
+
+</body>
+</html>
